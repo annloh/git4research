@@ -1,10 +1,10 @@
-##Ressources
+#Ressources
 
-### Pro Git
+## Pro Git
 This free ebook is an excellent ressource for anything git related and very well explained:  
 https://git-scm.com/book/en/v2
 
-### YouTube videos
+## YouTube videos
 
 This tutorial by Cory Scafer covers all the basics
 https://www.youtube.com/watch?v=HVsySz-h9r4
@@ -21,26 +21,26 @@ https://www.youtube.com/watch?v=Gg4bLk8cGNo&t=85s
 
 Both are based on the ProGit book and cover the most important concepts in a very approachable way.
 
-### Troubleshooting
+## Troubleshooting
 Here are a few ressources about dealing with common problems:
 https://ohshitgit.com/
 
-### Cheat Sheet
+## Cheat Sheet
 https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf
 
 
-### More Info on specific topics
+## More Info on specific topics
 
-### Atomic Commits
+## Atomic Commits
 https://curiousprogrammer.io/blog/why-i-create-atomic-commits-in-git
 
-### Commit messages
+## Commit messages
 https://chris.beams.io/posts/git-commit/
 
-#### Rebasing
+### Rebasing
 https://www.atlassian.com/git/tutorials/merging-vs-rebasing
 https://www.youtube.com/watch?v=6nolZKpiG_w
 
-#### Stashing
+### Stashing
 https://www.youtube.com/watch?v=KLEDKgMmbBI
 
