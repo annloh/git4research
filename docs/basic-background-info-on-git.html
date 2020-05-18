@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Git commands for the local repository | Git 4 Research</title>
+  <title>Chapter 3 Basic background info on Git | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Git commands for the local repository | Git 4 Research" />
+  <meta property="og:title" content="Chapter 3 Basic background info on Git | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Git commands for the local repository | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 3 Basic background info on Git | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="beyond-the-command-line.html"/>
-<link rel="next" href="git-commands-for-the-remote-repository.html"/>
+<link rel="prev" href="getting-started.html"/>
+<link rel="next" href="the-command-line.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -184,22 +184,93 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-commands-for-the-local-repository" class="section level1">
-<h1><span class="header-section-number">Chapter 9</span> Git commands for the local repository</h1>
-<p><code>$ git init</code> will create a .git folder which is hidden. This initializes a repository
-<code>$ git add</code> will put files in a staging area
-<code>$ git status</code> will show differences between staging area and working tree
-<code>$ git commit</code> will take everything that is in the staging area and put in in the local repository</p>
-<p><code>$ git clean -f</code> deletes all untracked files</p>
+<div id="basic-background-info-on-git" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Basic background info on Git</h1>
+<p>Many people think of Github as a dropbox for code.
+While this is relatively far from the truth it is not entirely inacurate.
+If so then Github is a dropbox on speed.</p>
+<div id="what-is-git" class="section level2">
+<h2><span class="header-section-number">3.1</span> What is Git?</h2>
+<ul>
+<li>distributed version-control system</li>
+<li>most widely used modern version control system in the world</li>
+<li>most recognized and popular approach to contribute to a project</li>
+<li>not just for code but for any text-based projects</li>
+</ul>
+<hr />
+</div>
+<div id="why-use-git" class="section level2">
+<h2><span class="header-section-number">3.2</span> Why use git?</h2>
+<ul>
+<li>Version control</li>
+<li>Keep track of how a project evolved</li>
+<li>Undo mistakes</li>
+<li>Maintain alternative versions</li>
+<li>Test new features without breaking anything</li>
+<li>Private Collaboration (within lab or with collaborators)</li>
+<li>Public collaboration (with the research field)</li>
+<li>Decentralized i.e. you don’t have to be connected to a server to use git (unlike google docs or overleaf)</li>
+<li>Git encourages the use of a transparant and reviewed workflow</li>
+</ul>
+<hr />
+</div>
+<div id="limitations" class="section level2">
+<h2><span class="header-section-number">3.3</span> Limitations</h2>
+<ul>
+<li>Git only works “properly” with text based file-types.</li>
+<li>Any file can be tracked</li>
+<li>Git will only be able to display and merge changes for text-based files</li>
+<li>The git history includes copies of all past versions so larger file types blow up your repository</li>
+<li>Git is not a backup-system (unless you also upload your repository to a remote server)</li>
+<li>If you deleted a repository it is gone</li>
+</ul>
+<hr />
+</div>
+<div id="typical-text-based-research-file-types-that-work-well-with-git" class="section level2">
+<h2><span class="header-section-number">3.4</span> Typical text based research file types that work well with git</h2>
+<ul>
+<li>*.txt (Textfiles)<br />
+</li>
+<li>*.R (R File)</li>
+<li>*.Rmd (R Markdown document)</li>
+<li>*.csv (Comma delimited value files)</li>
+<li>*.tex (Latex files)</li>
+<li>*.bib (Bibliography files)</li>
+<li>*.sps (SPSS analysis scripts)</li>
+</ul>
+<hr />
+<div id="caveat" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Caveat</h3>
+<p>Depending on when you start managing a project as a git repository collaborators or people on the internet can see every single change you have ever made to the file.
+Unfortunately, this has been used against people in the past. /</p>
+<p>While I advocate a transparent research process, you might be taken aback by this level of transparency.</p>
+<p>There are ways to prevent this.
+- Only upload a close to final version to github<br />
+- Collaborate on private repositories and create a new public repository once the project is in a presentable state (It doesn’t actually need to be a new repository. You can also rebase the project to hide past steps)<br />
+- Write a disclaimer in the readme that the amount of project contribution cannot be inferred from the project history.</p>
+<p>The option I prefer and recommend is going public from the get go and mainly working on a work-in-progress-branch.
+Branches on public repositories are also public. The default view, however, is the master branch. Most researchers who are not advanced git users won’t even know about branches and those who don’t won’t bother checking then out. More on branches <a href="branches.html#branches">here</a></p>
+<hr />
+</div>
+<div id="is-it-for-me" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Is it for me?</h3>
+<ul>
+<li>Do you have several versions of something but no idea what the difference between them is or how they evolved?</li>
+<li>Do you find yourself copying large sections of code to play with it, try something our wihtout breaking what you already accomplished?</li>
+<li>Have you ever changed something in multiple parts of your code only to figure out that that was a bad idea and the first aproach was better?</li>
+<li>Have you ever worked on code with multiple people and have no idea who wrote a specific part?</li>
+</ul>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="beyond-the-command-line.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-commands-for-the-remote-repository.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-command-line.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
