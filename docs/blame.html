@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 What is Git? | Git 4 Research</title>
+  <title>Chapter 16 Blame | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 What is Git? | Git 4 Research" />
+  <meta property="og:title" content="Chapter 16 Blame | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 What is Git? | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 16 Blame | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="git-github.html"/>
-<link rel="next" href="why-use-git.html"/>
+<link rel="prev" href="diff.html"/>
+<link rel="next" href="collaboration-hacks.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,23 +164,36 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="what-is-git" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> What is Git?</h1>
-<ul>
-<li>distributed version-control system</li>
-<li>most widely used modern version control system in the world</li>
-<li>most recognized and popular approach to contribute to a project</li>
-<li>not just for code but for any text-based projects</li>
-</ul>
-<hr />
+<div id="blame" class="section level1">
+<h1><span class="header-section-number">Chapter 16</span> Blame</h1>
+<div class="figure">
+<img src="img/blame.jpg" alt="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" />
+<p class="caption"><a href="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" class="uri">https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg</a></p>
+</div>
+<div id="figuring-our-who-is-responsible" class="section level2">
+<h2><span class="header-section-number">16.1</span> Figuring our who is responsible</h2>
+<p><code>git blame</code></p>
+
+<p>#Git workflow</p>
+<p>##Feature branches</p>
+<p>##Pull requests
+When you have done some work on a feature branch and would like to incorporate those changes into the master brach it is good practice to send a pull request (rather then push to teh master branch).
+A pull request is a message that lets your collaborators now that a substancial part is ready and can be reviewed.
+This can initiate a conversation about the suggested changes. More on pull requests here:<br />
+<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests" class="uri">https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests</a></p>
+<p>##Tipps to make life with git easier
+- submit frequently
+- keep lines short (i.e. less than 80 characters when coding, one sentence when wiring in latex)</p>
+
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="git-github.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="why-use-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="diff.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="collaboration-hacks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

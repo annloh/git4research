@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 11 Initiating a repository | Git 4 Research</title>
+  <title>Chapter 13 Commits | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 11 Initiating a repository | Git 4 Research" />
+  <meta property="og:title" content="Chapter 13 Commits | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 11 Initiating a repository | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 13 Commits | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="talking-to-git.html"/>
-<link rel="next" href="git-commands-for-the-local-repository.html"/>
+<link rel="prev" href="git-commands-for-the-local-repository.html"/>
+<link rel="next" href="branching.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,31 +164,64 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="initiating-a-repository" class="section level1">
-<h1><span class="header-section-number">Chapter 11</span> Initiating a repository</h1>
-<p>We will introduce two simple ways to version control your work with git.
-There are more but these should get you started:</p>
-<div id="clone-existing-repository" class="section level2">
-<h2><span class="header-section-number">11.1</span> Clone existing repository</h2>
-<p>This is the easiest way to start a project that you also want to maintain on github or that you want to collaborate on.</p>
-<p>You go to a repository on github and clone it. This can either be an existing repository that a colleague added you to as a collaborator
-or you can create a new empty repository on github to start a project.</p>
-<p>Here the step by step instructions:</p>
+<div id="commits" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> Commits</h1>
+<div id="what-is-a-commit" class="section level2">
+<h2><span class="header-section-number">13.1</span> What is a commit?</h2>
+<p>If you decide to commit your staged files git will take a snapshot of the new status and add it to the repository.
+This snapshot will come with a unique sha1 hash.
+This unique hash can be used to refer to this snapshot in the future.
+Technically, a <em>commit</em> refers to all the file content, plus the history up to that point, plus all the metadata,
+which is represented by the hash created from all of this.
+When people taking about the “content of a commit” oder “reverting the commit” what they actually mean are the
+changes introduced by this commit so the diff to the previous commit.</p>
+<p><code>git commit</code></p>
+<p>Opens an editor and lets you enter your commit message
+The message should not be longer than 50 character and summarize what the commit does.
+This is the first line in the editor.</p>
+<p>In a new line more information can be added that provides more details.</p>
+<p>The open editor will also show a ton of information preceden by a <code>#</code>.
+This information is not part of the commit message.</p>
+<p>A shortcut, that lets you enter the commit message in the command line is
+<code>git commit -m "&lt;Add commit message here&gt;"</code></p>
 </div>
-<div id="fork-existing-repository" class="section level2">
-<h2><span class="header-section-number">11.2</span> Fork existing repository</h2>
+<div id="commit-messages" class="section level2">
+<h2><span class="header-section-number">13.2</span> Commit messages</h2>
 <div class="figure">
-<img src="img/fork.png" alt="https://dzone.com/storage/temp/8374694-forked.png" />
-<p class="caption"><a href="https://dzone.com/storage/temp/8374694-forked.png" class="uri">https://dzone.com/storage/temp/8374694-forked.png</a></p>
+<img src="img/commit_message.png" alt="https://imgs.xkcd.com/comics/git_commit_2x.png" />
+<p class="caption"><a href="https://imgs.xkcd.com/comics/git_commit_2x.png" class="uri">https://imgs.xkcd.com/comics/git_commit_2x.png</a></p>
+</div>
+<div id="content-of-commit-messages" class="section level3">
+<h3><span class="header-section-number">13.2.1</span> Content of Commit messages</h3>
+<p>There are a few simple rules that you should follow when writing commit messages</p>
+<p><a href="https://chris.beams.io/posts/git-commit/" class="uri">https://chris.beams.io/posts/git-commit/</a></p>
+</div>
+<div id="styling-commit-messages" class="section level3">
+<h3><span class="header-section-number">13.2.2</span> Styling Commit messages</h3>
+<p>You can decorate your commit messages with emojis.
+An overview can be found here:
+<a href="https://www.webfx.com/tools/emoji-cheat-sheet/" class="uri">https://www.webfx.com/tools/emoji-cheat-sheet/</a>
+While some emojis are really useful and ease communication others might be less useful
+Some fruthermore have a really long definiton which takes up valuable space in the commit message.
+If you would like to use emojis in your commit messages decide on a set of icons and their use together with your collaborators.</p>
+<p>Here a few ideas of how they can be used:</p>
 </div>
 </div>
-<div id="create-a-new-local-repository" class="section level2">
-<h2><span class="header-section-number">11.3</span> Create a new local repository</h2>
-<p>If you want to only track your work locally you can create a new repository like this:</p>
-<p>##!Caveat</p>
-<p>Do not clone a remote repository that you do not have writing access to.
-What you should do instead is fork it.
-Which we cover here:</p>
+<div id="when-to-commit" class="section level2">
+<h2><span class="header-section-number">13.3</span> When to commit?</h2>
+<p>A difficult decision is at what point to commit.
+What amount of changes define a useful set to commit?</p>
+<p>First of all the change introduced by a commit should be logical and coherent.
+So changing three typos adding a comment and defining a new function is neither logical nor coherent.
+These changes should be in different commmits.</p>
+<p>On the other hand commiting frequently, i.e. keeping the commits small is beneficial for collaboration
+(less time for others to change stuff creating merge conflics) and also good from a backup perspective.
+Furthermore, it is easier to undo small things than large things.</p>
+<p>However, the amount of things changed does not have to be one.
+If you, for example, decide to use a different estimator and therefor have to change a lot of code that could still
+be a coherent set of changes. “Use estimator abc instead of estimator xyz”.</p>
+<p>More information about the size of a commit can be found here:
+<a href="https://curiousprogrammer.io/blog/why-i-create-atomic-commits-in-git" class="uri">https://curiousprogrammer.io/blog/why-i-create-atomic-commits-in-git</a></p>
 
 </div>
 </div>
@@ -197,8 +230,8 @@ Which we cover here:</p>
           </div>
         </div>
       </div>
-<a href="talking-to-git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-commands-for-the-local-repository.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git-commands-for-the-local-repository.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="branching.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

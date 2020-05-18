@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Git =/= Github | Git 4 Research</title>
+  <title>Chapter 12 Git commands for the local repository | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Git =/= Github | Git 4 Research" />
+  <meta property="og:title" content="Chapter 12 Git commands for the local repository | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Git =/= Github | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 12 Git commands for the local repository | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="getting-started.html"/>
-<link rel="next" href="what-is-git.html"/>
+<link rel="prev" href="initiating-a-repository.html"/>
+<link rel="next" href="commits.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,31 +164,27 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-github" class="section level1">
-<h1><span class="header-section-number">Chapter 3</span> Git =/= Github</h1>
-<p>I hear a lot of people using the terms git and github exchagably.
-Many want to learn how to use github to share their code online with other researchers.
-Sharing code online is only a fraction of what github can do and was designed to do.
-Git is a powerful tool that is completely independent of github.
-It is a little like sending people DMs on facebook.
-Yes, you can share code on github and you can DM people on facebook but equating the DM function to facebook would mean you are missing out on a lot of features
-plus it is not the key feature of facebook.</p>
-<p>The core function of git is version control and code management. You can do that locally (i.e. on your own computer) or remotely (i.e. on a server).
-Github is a provider that hosts your git controlled projects remotely.<br />
-It offers you everything git has to offer plus some extra features for collaboration and access control.
-There are other provoders that offer similar services such as gitlab and bitbucket.</p>
+<div id="git-commands-for-the-local-repository" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> Git commands for the local repository</h1>
+<p>git init will create a .git folder which is hidden. This initializes a repository
+git add will put files in a staging area
+git status will show differences between staging area and working tree
+git commit will take everything that is in the staging area and put in in the local repository</p>
+<p>git clean -f deletes all untracked files</p>
 
-<p>Many people think of Github as a dropbox for code.
-While this is relatively far from the truth it is not entirely inacurate.
-If so then Github is a dropbox on speed.</p>
+<p>#Git commands for the remote repository</p>
+<p>git push will take your commit and take it to a remote repository (e.g. github)
+git pull will get the latest changes from a remote repository
+git clone will copy a remote repository to your local folder</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="getting-started.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-is-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="initiating-a-repository.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="commits.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

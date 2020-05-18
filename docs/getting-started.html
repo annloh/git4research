@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 16 Blame | Git 4 Research</title>
+  <title>Chapter 2 Getting started | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 16 Blame | Git 4 Research" />
+  <meta property="og:title" content="Chapter 2 Getting started | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 16 Blame | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 2 Getting started | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="diff.html"/>
-<link rel="next" href="collaboration-hacks.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="git-github.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,26 +164,52 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="blame" class="section level1">
-<h1><span class="header-section-number">Chapter 16</span> Blame</h1>
-<div class="figure">
-<img src="img/blame.jpg" alt="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" />
-<p class="caption"><a href="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" class="uri">https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg</a></p>
+<div id="getting-started" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Getting started</h1>
+<div id="installing-git" class="section level2">
+<h2><span class="header-section-number">2.1</span> Installing git</h2>
+<p>You will need to install git.
+How to do this is explained here:</p>
+<p><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" class="uri">https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a></p>
+<p>##Initial setup
+After the installation there are a few customizations that only have to be done once (well once on every computer you work with).
+They involve telling git your name, your e-mailaddress, your favourite text editor and linking to your git-hub account.
+If you are planning on collaborating with people who use a different operating system than you,
+it is wise to also tell git how to handle line endings.</p>
+<div id="setting-the-configuration-information" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Setting the configuration information</h3>
+<p>Rightclick anywhere in a filebrowser and click
+“Git BASH HERE”</p>
+<p>This will open a command line where you will have to enter the following information:</p>
+<p><code>$ git config --global user.name "&lt;Your name&gt;"</code></p>
+<p><code>$ git config --global user.email "&lt;your email address&gt;"</code></p>
+<p>The editor to change commit messages is usually whatever you have as a default associated to <code>.txt</code> files
+you can change it like this
+<code>$ git config --global core.editor "&lt;name of my favourite editor&gt;"</code></p>
+<p>Instead of <code>--global</code> you can use <code>--local</code> for a repository or <code>--system</code> for your computer only.
+This might make sense when you might be commititing changes under an alias e.g. for a collaborator who can’t use git
+(see section xyx for more details).</p>
+<p>Alternatively open git gui by typing
+<code>$ git gui</code> in the command line</p>
+<p>GitGUI will open click the tab “Edit” and then “Options”</p>
+<p>How to prevent git from demanding your GitHub user name and password all the time can be read here:<br />
+<a href="https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh" class="uri">https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh</a></p>
+<p>There are a few more options that are smart to set.</p>
+<p>You can open the config file in an editor like this:<br />
+<code>$ git config --global -e --edit</code></p>
+<p>###Prevent problems with line ending (important for collaboration across operating systems)
+transforms windows line endings into linux line endings upon adding
+CRLF = Windows line endings
+LF = unix and mac line endings</p>
+<p><code>git config --global core.autocrlf input</code></p>
 </div>
-<div id="figuring-our-who-is-responsible" class="section level2">
-<h2><span class="header-section-number">16.1</span> Figuring our who is responsible</h2>
-<p><code>git blame</code></p>
-
-<p>#Git workflow</p>
-<p>##Feature branches</p>
-<p>##Pull requests
-When you have done some work on a feature branch and would like to incorporate those changes into the master brach it is good practice to send a pull request (rather then push to teh master branch).
-A pull request is a message that lets your collaborators now that a substancial part is ready and can be reviewed.
-This can initiate a conversation about the suggested changes. More on pull requests here:<br />
-<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests" class="uri">https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests</a></p>
-<p>##Tipps to make life with git easier
-- submit frequently
-- keep lines short (i.e. less than 80 characters when coding, one sentence when wiring in latex)</p>
+</div>
+<div id="getting-a-git-hub-account" class="section level2">
+<h2><span class="header-section-number">2.2</span> Getting a git-hub account</h2>
+<p>Get a GitHub account here:
+<a href="https://github.com/join" class="uri">https://github.com/join</a></p>
+<p>If you are a student or a university researcher you might be elligible for a free pro account.
+Check out your options here:</p>
 
 </div>
 </div>
@@ -192,8 +218,8 @@ This can initiate a conversation about the suggested changes. More on pull reque
           </div>
         </div>
       </div>
-<a href="diff.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="collaboration-hacks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="git-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

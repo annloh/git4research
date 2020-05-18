@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 14 Branching | Git 4 Research</title>
+  <title>Chapter 9 Basic concepts | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 14 Branching | Git 4 Research" />
+  <meta property="og:title" content="Chapter 9 Basic concepts | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 14 Branching | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 9 Basic concepts | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="commits.html"/>
-<link rel="next" href="diff.html"/>
+<link rel="prev" href="git-lingo.html"/>
+<link rel="next" href="talking-to-git.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,58 +164,23 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="branching" class="section level1">
-<h1><span class="header-section-number">Chapter 14</span> Branching</h1>
-<div class="figure">
-<img src="img/branching.png" alt="https://i.imgur.com/YG8In8X.png" />
-<p class="caption"><a href="https://i.imgur.com/YG8In8X.png" class="uri">https://i.imgur.com/YG8In8X.png</a></p>
+<div id="basic-concepts" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Basic concepts</h1>
+<p>If you understand these basic concepts you are well equipped to conquer git.</p>
+<div id="working-directory" class="section level2">
+<h2><span class="header-section-number">9.1</span> Working directory</h2>
 </div>
-<div id="creating-a-new-branch" class="section level2">
-<h2><span class="header-section-number">14.1</span> Creating a new branch</h2>
-<p><code>$ git branch &lt;new branch&gt;</code>
-creates a new branch but does not check it out (i.e. does not switch to it)</p>
-<p>Create a new branch and imediately check it out
-<code>$ git checkout -b &lt;new-branch&gt;</code></p>
-<p>This will get you a new local branch.
-It is however not automatically availible on the remote.
-This can be acchieved as following:</p>
-<p><code>$ git push origin &lt;new-branch&gt;</code></p>
+<div id="staging-area" class="section level2">
+<h2><span class="header-section-number">9.2</span> Staging area</h2>
 </div>
-<div id="switching-branches" class="section level2">
-<h2><span class="header-section-number">14.2</span> Switching branches</h2>
-<p><code>git checkout &lt;branchname you want to work on&gt;</code></p>
-<p>Creating a new branch locally does not result in the remote having the same branch (and the other way around).</p>
+<div id="history" class="section level2">
+<h2><span class="header-section-number">9.3</span> History</h2>
 </div>
-<div id="fetching-changes-after-pull-request" class="section level2">
-<h2><span class="header-section-number">14.3</span> Fetching changes after pull request</h2>
-<p><code>$ git fetch --prune</code>
-Deletes references to remote branches which have been deleted on the server</p>
-<p><code>$ git merge --ff-only</code>
-Gives a warning if the merge is not a fast-forward merge and does not go through with it</p>
-<p><code>$ git merge --no-ff</code>
-Does fast-forward but creates a merge commit</p>
-
-<p>#Merging
-<img src="merge.png" alt="https://www.monkeyuser.com/assets/images/2017/67-merging-branches.png" /></p>
-
-<p>#Problem solving</p>
+<div id="remote" class="section level2">
+<h2><span class="header-section-number">9.4</span> Remote</h2>
 </div>
-<div id="push-against-resistence" class="section level2">
-<h2><span class="header-section-number">14.4</span> Push against resistence</h2>
-<div class="figure">
-<img src="img/forge.jpg" alt="https://i.imgflip.com/lrihf.jpg" />
-<p class="caption"><a href="https://i.imgflip.com/lrihf.jpg" class="uri">https://i.imgflip.com/lrihf.jpg</a></p>
-</div>
-</div>
-<div id="you-ammended-after-pushing-to-the-remote" class="section level2">
-<h2><span class="header-section-number">14.5</span> You ammended after pushing to the remote</h2>
-<p>Git will not let you push after ammending because the ammend changed the commit and it does not match the remote one anymore.
-Git hence recommends that you pull first. That is not what you want because you have just changed that lst commit with ammend.
-You will hence have to force the push.</p>
-<p><code>git push --force-with-lease</code>
-This way of forcing the push is preferred over push -f because the
-with-lease will check whether there are any additional changes on the remote that you had not fetched yet</p>
-
+<div id="stash" class="section level2">
+<h2><span class="header-section-number">9.5</span> Stash</h2>
 
 </div>
 </div>
@@ -224,8 +189,8 @@ with-lease will check whether there are any additional changes on the remote tha
           </div>
         </div>
       </div>
-<a href="commits.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="diff.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="git-lingo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="talking-to-git.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

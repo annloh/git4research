@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 Git commands for the local repository | Git 4 Research</title>
+  <title>Chapter 15 Diff | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 Git commands for the local repository | Git 4 Research" />
+  <meta property="og:title" content="Chapter 15 Diff | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 Git commands for the local repository | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 15 Diff | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="initiating-a-repository.html"/>
-<link rel="next" href="commits.html"/>
+<link rel="prev" href="branching.html"/>
+<link rel="next" href="blame.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -66,7 +66,7 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Git for research</a></li>
+<li><a href="./">Git 4 research</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
@@ -164,27 +164,49 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="git-commands-for-the-local-repository" class="section level1">
-<h1><span class="header-section-number">Chapter 12</span> Git commands for the local repository</h1>
-<p>git init will create a .git folder which is hidden. This initializes a repository
-git add will put files in a staging area
-git status will show differences between staging area and working tree
-git commit will take everything that is in the staging area and put in in the local repository</p>
-<p>git clean -f deletes all untracked files</p>
+<div id="diff" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> Diff</h1>
+<div id="comparing-current-changes" class="section level2">
+<h2><span class="header-section-number">15.1</span> Comparing current changes</h2>
+<p><code>git diff</code>
+show differences between the working directory and the index</p>
+<p><code>git diff --cached</code>
+show difference between the index and the most recent commit</p>
+<p><code>git diff HEAD</code>
+show differences beween your working directory and the most recent commit</p>
+<p>All of the commands aboven can be combined with a filename to limit it to the diff of that file,
+i.e.</p>
+<p><code>git diff &lt;filename&gt;</code></p>
+</div>
+<div id="comparing-arbitrary-diffs" class="section level2">
+<h2><span class="header-section-number">15.2</span> Comparing arbitrary diffs</h2>
+<p><code>git diff &lt;partial hash&gt;..&lt;partial hash&gt;</code></p>
+<p><code>git diff &lt;branch1&gt;..&lt;branch2&gt;</code></p>
+<p>This can also be combined with a filename:</p>
+<p><code>git diff &lt;branch1&gt;..&lt;branch2&gt; &lt;filename&gt;</code></p>
+<p>How to read a diff is nicely explained here:
+<a href="https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs" class="uri">https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs</a></p>
+<p>##Difftool</p>
+<p>A difftool is a program that facilitates viewing a diff.
+If you replace the diff in the git diff command by difftool
+the difftool will open in s new window and show the requested diff.</p>
+<p>Adding a &amp; to the end of the line allows you to keep using the commandline with the difftool open.</p>
+<p><code>git difftool &amp;</code>
+opens the predefined difftool (In my case “kdiff3”)
+shows index on the left and working directory on the right</p>
+<p><code>git difftool HEAD &amp;</code>
+show differences beween your working directory and the most recent commit
+most recent commit is on the left and working directory on the right</p>
 
-<p>#Git commands for the remote repository</p>
-<p>git push will take your commit and take it to a remote repository (e.g. github)
-git pull will get the latest changes from a remote repository
-git clone will copy a remote repository to your local folder</p>
-
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="initiating-a-repository.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="commits.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="branching.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="blame.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
