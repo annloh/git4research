@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Blame | Git 4 Research</title>
+  <title>Chapter 13 Problem solving | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Blame | Git 4 Research" />
+  <meta property="og:title" content="Chapter 13 Problem solving | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Blame | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 13 Problem solving | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="diff.html"/>
-<link rel="next" href="git-workflow.html"/>
+<link rel="prev" href="merging.html"/>
+<link rel="next" href="diff.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -181,15 +181,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="blame" class="section level1">
-<h1><span class="header-section-number">Chapter 15</span> Blame</h1>
+<div id="problem-solving" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> Problem solving</h1>
+<div id="push-against-resistence" class="section level2">
+<h2><span class="header-section-number">13.1</span> Push against resistence</h2>
 <div class="figure">
-<img src="img/blame.jpg" alt="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" style="width:80.0%" />
-<p class="caption"><a href="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" class="uri">https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg</a></p>
+<img src="img/force.jpg" alt="https://i.imgflip.com/lrihf.jpg" />
+<p class="caption"><a href="https://i.imgflip.com/lrihf.jpg" class="uri">https://i.imgflip.com/lrihf.jpg</a></p>
 </div>
-<div id="figuring-our-who-is-responsible" class="section level2">
-<h2><span class="header-section-number">15.1</span> Figuring our who is responsible</h2>
-<p><code>git blame</code></p>
+</div>
+<div id="you-ammended-after-pushing-to-the-remote" class="section level2">
+<h2><span class="header-section-number">13.2</span> You ammended after pushing to the remote</h2>
+<p>Git will not let you push after ammending because the ammend changed the commit and it does not match the remote one anymore.
+Git hence recommends that you pull first. That is not what you want because you have just changed that lst commit with ammend.
+You will hence have to force the push.</p>
+<p><code>git push --force-with-lease</code>
+This way of forcing the push is preferred over push -f because the
+with-lease will check whether there are any additional changes on the remote that you had not fetched yet</p>
+
 
 </div>
 </div>
@@ -198,8 +207,8 @@
           </div>
         </div>
       </div>
-<a href="diff.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="merging.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diff.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

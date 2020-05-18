@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 15 Blame | Git 4 Research</title>
+  <title>Chapter 16 Git workflow | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 15 Blame | Git 4 Research" />
+  <meta property="og:title" content="Chapter 16 Git workflow | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 15 Blame | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 16 Git workflow | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="diff.html"/>
-<link rel="next" href="git-workflow.html"/>
+<link rel="prev" href="blame.html"/>
+<link rel="next" href="collaboration-hacks.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -181,15 +181,24 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="blame" class="section level1">
-<h1><span class="header-section-number">Chapter 15</span> Blame</h1>
-<div class="figure">
-<img src="img/blame.jpg" alt="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" style="width:80.0%" />
-<p class="caption"><a href="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" class="uri">https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg</a></p>
+<div id="git-workflow" class="section level1">
+<h1><span class="header-section-number">Chapter 16</span> Git workflow</h1>
+<div id="feature-branches" class="section level2">
+<h2><span class="header-section-number">16.1</span> Feature branches</h2>
 </div>
-<div id="figuring-our-who-is-responsible" class="section level2">
-<h2><span class="header-section-number">15.1</span> Figuring our who is responsible</h2>
-<p><code>git blame</code></p>
+<div id="pull-requests" class="section level2">
+<h2><span class="header-section-number">16.2</span> Pull requests</h2>
+<p>When you have done some work on a feature branch and would like to incorporate those changes into the master brach it is good practice to send a pull request (rather then push to teh master branch).
+A pull request is a message that lets your collaborators now that a substancial part is ready and can be reviewed.
+This can initiate a conversation about the suggested changes. More on pull requests here:<br />
+<a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests" class="uri">https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests</a></p>
+</div>
+<div id="tipps-to-make-life-with-git-easier" class="section level2">
+<h2><span class="header-section-number">16.3</span> Tipps to make life with git easier</h2>
+<ul>
+<li>submit frequently</li>
+<li>keep lines short (i.e. less than 80 characters when coding, one sentence when wiring in latex)</li>
+</ul>
 
 </div>
 </div>
@@ -198,8 +207,8 @@
           </div>
         </div>
       </div>
-<a href="diff.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="git-workflow.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="blame.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="collaboration-hacks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
