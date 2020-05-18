@@ -1,5 +1,12 @@
 # Problem solving 
 
+
+## You don't like your changes
+
+
+
+![https://meme-arsenal.com/create/meme/628437](img/resert--hard.jpg)
+
 ## Push against resistence
 ![https://i.imgflip.com/lrihf.jpg](img/force.jpg)
 
@@ -13,4 +20,5 @@ You will hence have to force the push.
 This way of forcing the push is preferred over `$ git push -f` because the 
 with-lease will check whether there are any additional changes on the remote that you had not fetched yet.
 
+![https://pbs.twimg.com/media/B093CwRCQAEwnD4?format=jpg&name=large](img/git push-f.jpg)
 

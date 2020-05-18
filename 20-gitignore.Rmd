@@ -1,0 +1,37 @@
+# .gitignore
+
+Gitignore is a file which tells git which files to ignore i.e. which files should not be added to the repository.
+
+The gitignore can contain specific files. Folders that should be ignored.
+Files with specific endings or partial file names.
+
+## Create .gitignore
+
+Enter
+`touch .gitignore`
+or create a textfile and rename it to `.gitignore` (no .txt ending just this)
+
+## Ignore folders
+
+/foldername/
+	- First / indicates
+	- Second / 
+
+## Ignore specific files
+filename.ending
+
+## Ignore specific filetype
+*.pdf
+
+## Ignore files with specified string
+
+## Comments
+
+Any line starting with a `#` will be treated as a comment
+
+## What should go in the .gitignore?
+
+- temporary files
+- output files  
+
+

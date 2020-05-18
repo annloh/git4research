@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 12 Branching | Git 4 Research</title>
+  <title>Chapter 21 .gitignore | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 12 Branching | Git 4 Research" />
+  <meta property="og:title" content="Chapter 21 .gitignore | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 12 Branching | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 21 .gitignore | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="commits.html"/>
-<link rel="next" href="merging.html"/>
+<link rel="prev" href="other-peoples-code.html"/>
+<link rel="next" href="ressources.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -199,35 +199,44 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="branches" class="section level1">
-<h1><span class="header-section-number">Chapter 12</span> Branching</h1>
-<div class="figure">
-<img src="img/branching.png" alt="https://i.imgur.com/YG8In8X.png" style="width:80.0%" />
-<p class="caption"><a href="https://i.imgur.com/YG8In8X.png" class="uri">https://i.imgur.com/YG8In8X.png</a></p>
+<div id="gitignore" class="section level1">
+<h1><span class="header-section-number">Chapter 21</span> .gitignore</h1>
+<p>Gitignore is a file which tells git which files to ignore i.e. which files should not be added to the repository.</p>
+<p>The gitignore can contain specific files. Folders that should be ignored.
+Files with specific endings or partial file names.</p>
+<div id="create-.gitignore" class="section level2">
+<h2><span class="header-section-number">21.1</span> Create .gitignore</h2>
+<p>Enter
+<code>touch .gitignore</code>
+or create a textfile and rename it to <code>.gitignore</code> (no .txt ending just this)</p>
 </div>
-<div id="creating-a-new-branch" class="section level2">
-<h2><span class="header-section-number">12.1</span> Creating a new branch</h2>
-<p><code>$ git branch &lt;new branch&gt;</code>
-creates a new branch but does not check it out (i.e. does not switch to it)</p>
-<p>Create a new branch and imediately check it out
-<code>$ git checkout -b &lt;new-branch&gt;</code></p>
-<p>This will get you a new local branch.
-It is however not automatically availible on the remote.
-This can be acchieved as following:</p>
-<p><code>$ git push origin &lt;new-branch&gt;</code></p>
+<div id="ignore-folders" class="section level2">
+<h2><span class="header-section-number">21.2</span> Ignore folders</h2>
+<p>/foldername/
+- First / indicates
+- Second /</p>
 </div>
-<div id="switching-branches" class="section level2">
-<h2><span class="header-section-number">12.2</span> Switching branches</h2>
-<p>To continue working on a different bracnch you have to switch branches by checking out the branch you would like to work on.  </p>
-<p><code>$ git checkout &lt;branchname you want to work on&gt;</code></p>
-<p>Careful! As always with checking out, make sure to stage or stash your changes,
-otherwise you lose work.</p>
-<p>Creating a new branch locally does not result in the remote having the same branch (and the other way around).</p>
+<div id="ignore-specific-files" class="section level2">
+<h2><span class="header-section-number">21.3</span> Ignore specific files</h2>
+<p>filename.ending</p>
 </div>
-<div id="fetching-changes-after-pull-request" class="section level2">
-<h2><span class="header-section-number">12.3</span> Fetching changes after pull request</h2>
-<p><code>$ git fetch --prune</code>
-Deletes references to remote branches which have been deleted on the server</p>
+<div id="ignore-specific-filetype" class="section level2">
+<h2><span class="header-section-number">21.4</span> Ignore specific filetype</h2>
+<p>*.pdf</p>
+</div>
+<div id="ignore-files-with-specified-string" class="section level2">
+<h2><span class="header-section-number">21.5</span> Ignore files with specified string</h2>
+</div>
+<div id="comments" class="section level2">
+<h2><span class="header-section-number">21.6</span> Comments</h2>
+<p>Any line starting with a <code>#</code> will be treated as a comment</p>
+</div>
+<div id="what-should-go-in-the-.gitignore" class="section level2">
+<h2><span class="header-section-number">21.7</span> What should go in the .gitignore?</h2>
+<ul>
+<li>temporary files</li>
+<li>output files</li>
+</ul>
 
 </div>
 </div>
@@ -236,8 +245,8 @@ Deletes references to remote branches which have been deleted on the server</p>
           </div>
         </div>
       </div>
-<a href="commits.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="merging.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="other-peoples-code.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ressources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

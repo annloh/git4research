@@ -1,5 +1,5 @@
 # Merging
-![https://www.monkeyuser.com/assets/images/2017/67-merging-branches.png](img/merging.png){ width=80% } 
+![https://www.monkeyuser.com/assets/images/2017/67-merging-branches.png](img/merging.png){ width=50% } 
 `$ git merge --ff-only`\  
 Gives a warning if the merge is not a fast-forward merge and does not go through with it
 

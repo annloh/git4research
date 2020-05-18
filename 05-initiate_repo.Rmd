@@ -19,7 +19,7 @@ What you should do instead is fork it.
 
 
 ## Fork existing repository
-![https://dzone.com/storage/temp/8374694-forked.png](img/fork.png)
+![https://dzone.com/storage/temp/8374694-forked.png](img/fork.png){ width=60% } 
 
 ## Create a new local repository
 If you want to only track your work locally you can create a new repository like this: \  

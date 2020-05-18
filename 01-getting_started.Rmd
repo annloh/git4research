@@ -6,7 +6,7 @@ How to do this is explained here:
 
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
-## Getting a git-hub account
+## Get a git-hub account
 
 Get a GitHub account here:
 https://github.com/join
@@ -18,7 +18,8 @@ How to prevent git from demanding your GitHub user name and password all the tim
 https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
 
 
-## Initial setup
+## Git config
+
 After the installation there are a few customizations that only have to be done once (well once on every computer you work with). 
 They involve telling git your name, your email address, your favourite text editor and linking to your git-hub account.
 If you are planning on collaborating with people who use a different operating system than you, 
@@ -57,7 +58,7 @@ You can open the config file in an editor like this:
 `$ git config --global -e --edit`
 
 
-### Line ending 
+### Line endings 
 
 Windows, Unix and Mac use different line endings. (CRLF = Windows line endings;
 LF = unix and mac line endings)
