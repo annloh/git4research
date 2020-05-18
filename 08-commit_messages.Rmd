@@ -10,7 +10,7 @@ which is represented by the hash created from all of this.
 When people taking about the "content of a commit" oder "reverting the commit" what they actually mean are the 
 changes introduced by this commit so the diff to the previous commit. 
 
-`git commit`
+`$ git commit`
 
 Opens an editor and lets you enter your commit message
 The message should not be longer than 50 character and summarize what the commit does.
@@ -22,7 +22,7 @@ The open editor will also show a ton of information preceden by a `#`.
 This information is not part of the commit message.
 
 A shortcut, that lets you enter the commit message in the command line is
-`git commit -m "<Add commit message here>"`
+`$ git commit -m "<Add commit message here>"`
 
 
 ## Commit messages
@@ -30,12 +30,14 @@ A shortcut, that lets you enter the commit message in the command line is
 ![https://imgs.xkcd.com/comics/git_commit_2x.png](img/commit_message.png)
 
 ### Content of Commit messages
-There are a few simple rules that you should follow when writing commit messages
+
+There are a few simple rules that you should follow when writing commit messages.//
 
 
 https://chris.beams.io/posts/git-commit/
 
 ### Styling Commit messages
+
 You can decorate your commit messages with emojis. 
 An overview can be found here:
 https://www.webfx.com/tools/emoji-cheat-sheet/
@@ -46,6 +48,7 @@ If you would like to use emojis in your commit messages decide on a set of icons
 Here a few ideas of how they can be used:
  
 ## When to commit?
+
 A difficult decision is at what point to commit.
 What amount of changes define a useful set to commit?
 

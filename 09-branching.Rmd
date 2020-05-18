@@ -1,5 +1,5 @@
 # Branching
-![https://i.imgur.com/YG8In8X.png](img/branching.png)
+![https://i.imgur.com/YG8In8X.png](img/branching.png){ width=80% } 
 
 ## Creating a new branch
 `$ git branch <new branch>`

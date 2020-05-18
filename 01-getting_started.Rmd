@@ -7,7 +7,7 @@ How to do this is explained here:
 https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 
-##Initial setup
+## Initial setup
 After the installation there are a few customizations that only have to be done once (well once on every computer you work with). 
 They involve telling git your name, your e-mailaddress, your favourite text editor and linking to your git-hub account.
 If you are planning on collaborating with people who use a different operating system than you, 
@@ -20,19 +20,19 @@ Rightclick anywhere in a filebrowser and click
 
 This will open a command line where you will have to enter the following information:
 
-`$ git config --global user.name "<Your name>"`
+`$ git config --global user.name "<Your name>"`\\
 
-`$ git config --global user.email "<your email address>"`
+`$ git config --global user.email "<your email address>"`\\
 
 The editor to change commit messages is usually whatever you have as a default associated to `.txt` files
 you can change it like this
-`$ git config --global core.editor "<name of my favourite editor>"`
+`$ git config --global core.editor "<name of my favourite editor>"`\\
 
 Instead of `--global` you can use `--local` for a repository or `--system` for your computer only. 
 This might make sense when you might be commititing changes under an alias e.g. for a collaborator who can't use git 
 (see section xyx for more details).
 
-Alternatively open git gui by typing 
+Alternatively open git gui by typing\\ 
 `$ git gui` in the command line
 
 GitGUI will open click the tab "Edit" and then "Options"

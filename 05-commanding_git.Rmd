@@ -11,16 +11,15 @@ Step 3 always consists of typing
 `git <verb>` and hitting enter.
 
 Often the verb is followed by more or less obscure other things that specify the way in which git should do the verb.
-Examples 
+Examples:\\ 
 
-`git commit -m '<commit message>'`
-`git add <hallo_world.txt>`
-`git checkout -b `
-`git clean -n`
+`git commit -m '<commit message>'`\\
+`git add <hallo_world.txt>`\\
+`git checkout -b `\\
+`git clean -n`\\
 
 If you are familiar with the linux command line these letters will probably make sense to you. 
-If you are not you can either live with the fact, that what you are typing makes little obvious sense 
-or read up on it here:
+If you are not you can either live with the fact, that what you are typing makes little obvious sense or read up on it here:
 
 ## Getting help
 
@@ -38,18 +37,3 @@ In this introduction we will cover 3 more ways to interact with git.
 They will be introdiced because they make your life easier for certain tasks
 plus they give you an additional sense of control by visually confirming what has happend.
 
-## gitk
-You can open gitk by typing
-`gitk --all &`
-
-This will make what you see a little prettier as it sorts by date-order
-` gitk --all --date-order &`
-
-This will open a new window with gitk.
-The `&` at the end of the line will allow you to keep using the command line while having the gitk window open.
-gitk allows you to get a good overview of your repository history. 
-Feel free to look around and see what happens if you click certain things.
-
-##gitGUI
-
-##kdiff3

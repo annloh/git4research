@@ -1,2 +1,2 @@
-#Merging
-![https://www.monkeyuser.com/assets/images/2017/67-merging-branches.png](merge.png)
+# Merging
+![https://www.monkeyuser.com/assets/images/2017/67-merging-branches.png](img/merging.png){ width=80% } 

@@ -1,0 +1,19 @@
+# Beyond the command line
+
+Making life easier
+
+## gitk
+You can open gitk by typing
+`gitk --all &`
+
+This will make what you see a little prettier as it sorts by date-order
+` gitk --all --date-order &`
+
+This will open a new window with gitk.
+The `&` at the end of the line will allow you to keep using the command line while having the gitk window open.
+gitk allows you to get a good overview of your repository history. 
+Feel free to look around and see what happens if you click certain things.
+
+##gitGUI
+
+##kdiff3
