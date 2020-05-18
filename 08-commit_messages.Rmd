@@ -1,0 +1,65 @@
+# Commits
+
+## What is a commit?
+
+If you decide to commit your staged files git will take a snapshot of the new status and add it to the repository.
+This snapshot will come with a unique sha1 hash. 
+This unique hash can be used to refer to this snapshot in the future. 
+Technically, a *commit* refers to all the file content, plus the history up to that point, plus all the metadata, 
+which is represented by the hash created from all of this.
+When people taking about the "content of a commit" oder "reverting the commit" what they actually mean are the 
+changes introduced by this commit so the diff to the previous commit. 
+
+`git commit`
+
+Opens an editor and lets you enter your commit message
+The message should not be longer than 50 character and summarize what the commit does.
+This is the first line in the editor.
+
+In a new line more information can be added that provides more details.
+
+The open editor will also show a ton of information preceden by a `#`. 
+This information is not part of the commit message.
+
+A shortcut, that lets you enter the commit message in the command line is
+`git commit -m "<Add commit message here>"`
+
+
+## Commit messages
+
+![https://imgs.xkcd.com/comics/git_commit_2x.png](img/commit_message.png)
+
+### Content of Commit messages
+There are a few simple rules that you should follow when writing commit messages
+
+
+https://chris.beams.io/posts/git-commit/
+
+### Styling Commit messages
+You can decorate your commit messages with emojis. 
+An overview can be found here:
+https://www.webfx.com/tools/emoji-cheat-sheet/
+While some emojis are really useful and ease communication others might be less useful
+Some fruthermore have a really long definiton which takes up valuable space in the commit message.
+If you would like to use emojis in your commit messages decide on a set of icons and their use together with your collaborators.
+
+Here a few ideas of how they can be used:
+ 
+## When to commit?
+A difficult decision is at what point to commit.
+What amount of changes define a useful set to commit?
+
+First of all the change introduced by a commit should be logical and coherent.
+So changing three typos adding a comment and defining a new function is neither logical nor coherent.
+These changes should be in different commmits.
+
+On the other hand commiting frequently, i.e. keeping the commits small is beneficial for collaboration 
+(less time for others to change stuff creating merge conflics) and also good from a backup perspective.
+Furthermore, it is easier to undo small things than large things. 
+
+However, the amount of things changed does not have to be one.
+If you, for example, decide to use a different estimator and therefor have to change a lot of code that could still
+be a coherent set of changes. "Use estimator abc instead of estimator xyz".
+ 
+More information about the size of a commit can be found here:
+https://curiousprogrammer.io/blog/why-i-create-atomic-commits-in-git

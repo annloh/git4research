@@ -1,0 +1,29 @@
+# Initiating a repository
+
+We will introduce two simple ways to version control your work with git.
+There are more but these should get you started:
+
+## Clone existing repository
+This is the easiest way to start a project that you also want to maintain on github or that you want to collaborate on.
+
+You go to a repository on github and clone it. This can either be an existing repository that a colleague added you to as a collaborator
+or you can create a new empty repository on github to start a project.
+
+Here the step by step instructions:
+
+
+
+
+## Fork existing repository
+![https://dzone.com/storage/temp/8374694-forked.png](img/fork.png)
+
+## Create a new local repository
+If you want to only track your work locally you can create a new repository like this:
+
+
+
+##!Caveat
+
+Do not clone a remote repository that you do not have writing access to. 
+What you should do instead is fork it. 
+Which we cover here:

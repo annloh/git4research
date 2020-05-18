@@ -1,0 +1,35 @@
+# The command line
+The command line (aka Git BASH or console) is how we tell git what to do. 
+If you are familiar with using a command line in LINUX this one will be just the same. 
+You can change directories, list files and so on.
+
+In this into I will not assume that you have any knowlege of how to use the commandline 
+(i.e. change directories and such) so we will always open it right in the folder we want to use it.
+
+
+## Open Git BASH
+Use your file explorer to navigate to the folder you want to version control with git.
+
+Rightclick anywhere in a filebrowser and click
+"Git BASH HERE"
+
+This will open a command line where you will have to enter the the commands that you find in this introduction.
+
+## General notes regarding the commad line
+
+The following should be kept in mind when usind the command line to not go completely crazy in the process:
+- Capitalization matters  
+- Spacing matters  
+- Some shortcuts like `Ctrl+c` or `Ctrl+v` won't work. You can use the right mouse key instead  
+- The tab key is your best friend as it will auto-complete or partially autocomplete anything for you 
+which greatly reduces the risk for typos  
+- The up-key is your second best friend. Pressing the up-key will automatically input the last command used.   
+This is especially useful if you got an error and just need to slightly adjust the previous input.  
+
+## Other useful command line knowledge:
+
+`touch filename.txt`  creates a file
+
+`&` at the end of a line will make sure you can keep using the command line without closing whatever you opened
+ 
+

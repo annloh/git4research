@@ -1,0 +1,16 @@
+#Problem solving 
+
+## Push against resistence
+![https://i.imgflip.com/lrihf.jpg](img/forge.jpg)
+
+## You ammended after pushing to the remote
+
+Git will not let you push after ammending because the ammend changed the commit and it does not match the remote one anymore.
+Git hence recommends that you pull first. That is not what you want because you have just changed that lst commit with ammend.
+You will hence have to force the push.
+
+`git push --force-with-lease` 
+This way of forcing the push is preferred over  push -f because the 
+with-lease will check whether there are any additional changes on the remote that you had not fetched yet
+
+

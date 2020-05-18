@@ -1,0 +1,61 @@
+Many people think of Github as a dropbox for code.
+While this is relatively far from the truth it is not entirely inacurate.
+If so then Github is a dropbox on speed. 
+
+# What is Git?
+- distributed version-control system
+- most widely used modern version control system in the world
+- most recognized and popular approach to contribute to a project
+- not just for code but for any text-based projects
+
+---
+
+# Why use git?
+- Version control
+- Keep track of how a project evolved
+- Undo mistakes
+- Maintain alternative versions
+- Test new features without breaking anything
+- Private Collaboration (within lab or with collaborators)
+- Public collaboration (with the research field)
+- Decentralized i.e. you don't have to be connected to a server to use git (unlike google docs or overleaf)
+- Git encourages the use of a transparant and reviewed workflow
+
+---
+
+## Examples of common academic text based files that can be tracked with git
+- *.txt (Textfiles)   
+- *.R    (R File)
+- *.Rmd  (R Markdown document)
+- *.csv  (Comma delimited value files)
+- *.tex  (Latex files)
+- *.bib  (Bibliographie files)
+- *.sps  (SPSS Analysis files)
+
+---
+
+## Limitations
+- Git only works "properly" with text based file-types. 
+- Any file can be tracked
+- Git weill only be able to display and merge changes with text-based files
+- The git history includes copies of all past versions so larger file types blow up your repository 
+- Git is not a backup-system (unless you also upload your repository to a remote server) 
+- If you deleted a repository it is gone
+
+---
+
+## Caveat
+Depending on when you start managing a project as a git repository collaborators or people on the internet can see every single change you have ever made to the file.
+This has been used against people in the past. 
+There are ways to prevent this. 
+- Only upload a close to final version to github  
+- Colllaborate on private repositories and create a new public repository once the project is in a presentable state  
+- Write a disclaimer in the readme that the amount of project contribution cannot be inferred from the project history.  
+
+---
+
+## Is it for me?
+- Do you have several versions of something but no idea what the difference between them is or how they evolved?
+- Do you find yourself copying large sections of code to play with it, try something our wihtout breaking what you already accomplished?
+- Have you ever changed something in multiple parts of your code only to figure out that that was a bad idea and the first aproach was better?
+- Have you ever worked on code with multiple people and have no idea who wrote a specific part?

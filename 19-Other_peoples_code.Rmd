@@ -1,0 +1,20 @@
+#Other peoples code
+
+You have found something on github (or elsewhere on the internet) and would like to use it as a template? Great!  
+Answer the following questions to ensure proper acknowledgement of your sources:
+
+###Are you improving a product and would the original author benefir from your improvements?
+**Fork** the repository. You will know have a replica of the original (same name, complete history). However, this is now your personal copy. 
+It will show the original authors as contributors and everyone can see when and where you started modifying the original. As git still knows
+the original history you can make changes to the repository and send a pull request to the original authors inviting them to incorporate your changes.
+See here for more info on that:  
+https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork
+
+
+###Are you just stealing some code to get you started?
+**Download** the files and start your own repository. The complete history is now gone. It is not apparent that other people have been working on this in the past.  
+For reasons of transparency and acknowledgement do the following: 
+In your initial commit message add the url from where you got the code and the 
+sha-1 hash which indicates the exact commit that served as the source. You can additionally mention the source in the README.Md.
+Saving the hash of the original source also allowes you to obtain updates that the original author might add in the future. 
+(We will not cover how to do this in this intro.)  

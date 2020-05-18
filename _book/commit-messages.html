@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 13 Commit messages | Git 4 Research</title>
+  <meta name="description" content="This is a git-intro for researchers" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 13 Commit messages | Git 4 Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a git-intro for researchers" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 13 Commit messages | Git 4 Research" />
+  
+  <meta name="twitter:description" content="This is a git-intro for researchers" />
+  
+
+<meta name="author" content="Anna Lohmann" />
+
+
+<meta name="date" content="2020-02-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="git-commands-for-the-remote-repository.html"/>
+<link rel="next" href="branching.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Git for research</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#note"><i class="fa fa-check"></i><b>1.1</b> NOTE</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started</a><ul>
+<li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#installing-git"><i class="fa fa-check"></i><b>2.1</b> Installing git</a></li>
+<li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#initial-setup"><i class="fa fa-check"></i><b>2.2</b> Initial setup</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="getting-started.html"><a href="getting-started.html#setting-the-configuration-information"><i class="fa fa-check"></i><b>2.2.1</b> Setting the configuration information</a></li>
+<li class="chapter" data-level="2.2.2" data-path="getting-started.html"><a href="getting-started.html#prevent-problems-with-line-ending-important-for-collaboration-across-operating-systems"><i class="fa fa-check"></i><b>2.2.2</b> Prevent problems with line ending (important for collaboration across operating systems)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#getting-a-git-hub-account"><i class="fa fa-check"></i><b>2.3</b> Getting a git-hub account</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="git-github.html"><a href="git-github.html"><i class="fa fa-check"></i><b>3</b> Git =/= Github</a></li>
+<li class="chapter" data-level="4" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>4</b> Introduction</a></li>
+<li class="chapter" data-level="5" data-path="what-is-git.html"><a href="what-is-git.html"><i class="fa fa-check"></i><b>5</b> What is Git?</a></li>
+<li class="chapter" data-level="6" data-path="why-use-git.html"><a href="why-use-git.html"><i class="fa fa-check"></i><b>6</b> Why use git?</a><ul>
+<li class="chapter" data-level="6.1" data-path="why-use-git.html"><a href="why-use-git.html#examples-of-common-academic-text-based-files-that-can-be-tracked-with-git"><i class="fa fa-check"></i><b>6.1</b> Examples of common academic text based files that can be tracked with git</a></li>
+<li class="chapter" data-level="6.2" data-path="why-use-git.html"><a href="why-use-git.html#limitations"><i class="fa fa-check"></i><b>6.2</b> Limitations</a></li>
+<li class="chapter" data-level="6.3" data-path="why-use-git.html"><a href="why-use-git.html#caveat"><i class="fa fa-check"></i><b>6.3</b> Caveat</a></li>
+<li class="chapter" data-level="6.4" data-path="why-use-git.html"><a href="why-use-git.html#is-it-for-me"><i class="fa fa-check"></i><b>6.4</b> Is it for me?</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-command-line.html"><a href="the-command-line.html"><i class="fa fa-check"></i><b>7</b> The command line</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-command-line.html"><a href="the-command-line.html#open-git-bash"><i class="fa fa-check"></i><b>7.1</b> Open Git BASH</a></li>
+<li class="chapter" data-level="7.2" data-path="the-command-line.html"><a href="the-command-line.html#general-notes-regarding-the-commad-line"><i class="fa fa-check"></i><b>7.2</b> General notes regarding the commad line</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="what-is-keeping-you-from-using-git.html"><a href="what-is-keeping-you-from-using-git.html"><i class="fa fa-check"></i><b>8</b> What is keeping you from using git?</a></li>
+<li class="chapter" data-level="9" data-path="talking-to-git.html"><a href="talking-to-git.html"><i class="fa fa-check"></i><b>9</b> Talking to git</a><ul>
+<li class="chapter" data-level="9.1" data-path="talking-to-git.html"><a href="talking-to-git.html#getting-help"><i class="fa fa-check"></i><b>9.1</b> Getting help</a></li>
+<li class="chapter" data-level="9.2" data-path="talking-to-git.html"><a href="talking-to-git.html#gitk"><i class="fa fa-check"></i><b>9.2</b> gitk</a></li>
+<li class="chapter" data-level="9.3" data-path="talking-to-git.html"><a href="talking-to-git.html#gitgui"><i class="fa fa-check"></i><b>9.3</b> gitGUI</a></li>
+<li class="chapter" data-level="9.4" data-path="talking-to-git.html"><a href="talking-to-git.html#kdiff3"><i class="fa fa-check"></i><b>9.4</b> kdiff3</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html"><i class="fa fa-check"></i><b>10</b> Initiating a repository</a><ul>
+<li class="chapter" data-level="10.1" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#clone-existing-repository"><i class="fa fa-check"></i><b>10.1</b> Clone existing repository</a></li>
+<li class="chapter" data-level="10.2" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#create-a-new-local-repository"><i class="fa fa-check"></i><b>10.2</b> Create a new local repository</a></li>
+<li class="chapter" data-level="10.3" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#caveat-1"><i class="fa fa-check"></i><b>10.3</b> !Caveat</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="git-commands-for-the-local-repository.html"><a href="git-commands-for-the-local-repository.html"><i class="fa fa-check"></i><b>11</b> Git commands for the local repository</a></li>
+<li class="chapter" data-level="12" data-path="git-commands-for-the-remote-repository.html"><a href="git-commands-for-the-remote-repository.html"><i class="fa fa-check"></i><b>12</b> Git commands for the remote repository</a></li>
+<li class="chapter" data-level="13" data-path="commit-messages.html"><a href="commit-messages.html"><i class="fa fa-check"></i><b>13</b> Commit messages</a></li>
+<li class="chapter" data-level="14" data-path="branching.html"><a href="branching.html"><i class="fa fa-check"></i><b>14</b> Branching</a><ul>
+<li class="chapter" data-level="14.1" data-path="branching.html"><a href="branching.html#creating-a-new-branch"><i class="fa fa-check"></i><b>14.1</b> Creating a new branch</a></li>
+<li class="chapter" data-level="14.2" data-path="branching.html"><a href="branching.html#switching-branches"><i class="fa fa-check"></i><b>14.2</b> Switching branches</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="problem-solving.html"><a href="problem-solving.html"><i class="fa fa-check"></i><b>15</b> Problem solving</a><ul>
+<li class="chapter" data-level="15.1" data-path="problem-solving.html"><a href="problem-solving.html#you-ammended-after-pushing-to-the-remote"><i class="fa fa-check"></i><b>15.1</b> You ammended after pushing to the remote</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="git-workflow.html"><a href="git-workflow.html"><i class="fa fa-check"></i><b>16</b> Git workflow</a><ul>
+<li class="chapter" data-level="16.1" data-path="git-workflow.html"><a href="git-workflow.html#feature-branches"><i class="fa fa-check"></i><b>16.1</b> Feature branches</a></li>
+<li class="chapter" data-level="16.2" data-path="git-workflow.html"><a href="git-workflow.html#pull-requests"><i class="fa fa-check"></i><b>16.2</b> Pull requests</a></li>
+<li class="chapter" data-level="16.3" data-path="git-workflow.html"><a href="git-workflow.html#tipps-to-make-life-with-git-easier"><i class="fa fa-check"></i><b>16.3</b> Tipps to make life with git easier</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html"><i class="fa fa-check"></i><b>17</b> Collaboration Hacks</a><ul>
+<li class="chapter" data-level="17.1" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html#hack-1-dropbox-or-other-cloud-storage"><i class="fa fa-check"></i><b>17.1</b> Hack 1: Dropbox (Or other cloud storage)</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="hack-2-overleaf.html"><a href="hack-2-overleaf.html"><i class="fa fa-check"></i><b>18</b> Hack 2: Overleaf</a></li>
+<li class="chapter" data-level="19" data-path="other-peoples-code.html"><a href="other-peoples-code.html"><i class="fa fa-check"></i><b>19</b> Other peoples code</a><ul>
+<li class="chapter" data-level="19.0.1" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-improving-a-product-and-would-the-original-author-benefir-from-your-improvements"><i class="fa fa-check"></i><b>19.0.1</b> Are you improving a product and would the original author benefir from your improvements?</a></li>
+<li class="chapter" data-level="19.0.2" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-just-stealing-some-code-to-get-you-started"><i class="fa fa-check"></i><b>19.0.2</b> Are you just stealing some code to get you started?</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="ressources.html"><a href="ressources.html"><i class="fa fa-check"></i><b>20</b> Ressources</a><ul>
+<li class="chapter" data-level="20.1" data-path="ressources.html"><a href="ressources.html#pro-git"><i class="fa fa-check"></i><b>20.1</b> Pro Git</a></li>
+<li class="chapter" data-level="20.2" data-path="ressources.html"><a href="ressources.html#youtube-videos"><i class="fa fa-check"></i><b>20.2</b> YouTube videos</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Git 4 Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="commit-messages" class="section level1">
+<h1><span class="header-section-number">Chapter 13</span> Commit messages</h1>
+<p>There are a few simple rules that you should follow when writing commit messages</p>
+<p><a href="https://chris.beams.io/posts/git-commit/" class="uri">https://chris.beams.io/posts/git-commit/</a></p>
+<p>You can decorate your commit messages with emojis. An overview can be found here: <a href="https://www.webfx.com/tools/emoji-cheat-sheet/" class="uri">https://www.webfx.com/tools/emoji-cheat-sheet/</a> While some emojis are really useful and ease communication others might be less useful Some fruthermore have a really long definiton which takes up valuable space in the commit message. If you would like to use emojis in your commit messages decide on a set of icons and their use together with your collaborators.</p>
+<p>Here a few ideas of how they can be used:</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="git-commands-for-the-remote-repository.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="branching.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["git-help.pdf", "git-help.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

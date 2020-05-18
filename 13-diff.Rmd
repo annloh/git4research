@@ -1,0 +1,46 @@
+# Diff 
+
+## Comparing current changes
+`git diff`
+	show differences between the working directory and the index
+
+`git diff --cached`
+	show difference between the index and the most recent commit
+	
+`git diff HEAD`
+	show differences beween your working directory and the most recent commit
+
+All of the commands aboven can be combined with a filename to limit it to the diff of that file,
+i.e.
+
+`git diff <filename>`
+
+## Comparing arbitrary diffs
+
+`git diff <partial hash>..<partial hash>`
+
+`git diff <branch1>..<branch2>`
+
+This can also be combined with a filename:
+
+`git diff <branch1>..<branch2> <filename>`
+
+How to read a diff is nicely explained here:
+https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/diffs
+
+
+##Difftool
+
+A difftool is a program that facilitates viewing a diff.
+If you replace the diff in the git diff command by difftool 
+the difftool will open in s new window and show the requested diff.
+
+Adding a & to the end of the line allows you to keep using the commandline with the difftool open. 
+	
+`git difftool &`
+	opens the predefined difftool (In my case "kdiff3")
+	shows index on the left and working directory on the right
+
+`git difftool HEAD &`
+	show differences beween your working directory and the most recent commit
+	most recent commit is on the left and working directory on the right

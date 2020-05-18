@@ -1,0 +1,34 @@
+# Branching
+![https://i.imgur.com/YG8In8X.png](img/branching.png)
+
+## Creating a new branch
+`$ git branch <new branch>`
+creates a new branch but does not check it out (i.e. does not switch to it)
+
+
+Create a new branch and imediately check it out
+`$ git checkout -b <new-branch>`
+
+This will get you a new local branch. 
+It is however not automatically availible on the remote.
+This can be acchieved as following:
+
+`$ git push origin <new-branch>`
+
+
+## Switching branches
+`git checkout <branchname you want to work on>`
+
+Creating a new branch locally does not result in the remote having the same branch (and the other way around).
+
+## Fetching changes after pull request
+
+`$ git fetch --prune`
+Deletes references to remote branches which have been deleted on the server
+
+
+`$ git merge --ff-only`
+Gives a warning if the merge is not a fast-forward merge and does not go through with it
+
+`$ git merge --no-ff`
+Does fast-forward but creates a merge commit 

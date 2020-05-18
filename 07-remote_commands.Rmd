@@ -1,0 +1,5 @@
+#Git commands for the remote repository
+
+git push will take your commit and take it to a remote repository (e.g. github)
+git pull will get the latest changes  from a remote repository
+git clone will copy a remote repository to your local folder

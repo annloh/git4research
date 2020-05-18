@@ -1,0 +1,64 @@
+# Getting started
+
+## Installing git
+You will need to install git. 
+How to do this is explained here:
+
+https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+
+
+##Initial setup
+After the installation there are a few customizations that only have to be done once (well once on every computer you work with). 
+They involve telling git your name, your e-mailaddress, your favourite text editor and linking to your git-hub account.
+If you are planning on collaborating with people who use a different operating system than you, 
+it is wise to also tell git how to handle line endings.
+
+### Setting the configuration information
+
+Rightclick anywhere in a filebrowser and click
+"Git BASH HERE"
+
+This will open a command line where you will have to enter the following information:
+
+`$ git config --global user.name "<Your name>"`
+
+`$ git config --global user.email "<your email address>"`
+
+The editor to change commit messages is usually whatever you have as a default associated to `.txt` files
+you can change it like this
+`$ git config --global core.editor "<name of my favourite editor>"`
+
+Instead of `--global` you can use `--local` for a repository or `--system` for your computer only. 
+This might make sense when you might be commititing changes under an alias e.g. for a collaborator who can't use git 
+(see section xyx for more details).
+
+Alternatively open git gui by typing 
+`$ git gui` in the command line
+
+GitGUI will open click the tab "Edit" and then "Options"
+
+How to prevent git from demanding your GitHub user name and password all the time can be read here:  
+https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+
+There are a few more options that are smart to set. 
+
+You can open the config file in an editor like this:  
+`$ git config --global -e --edit`
+
+
+###Prevent problems with line ending (important for collaboration across operating systems)
+transforms windows line endings into linux line endings upon adding
+CRLF = Windows line endings
+LF = unix and mac line endings
+
+`git config --global core.autocrlf input`
+
+
+
+## Getting a git-hub account
+
+Get a GitHub account here:
+https://github.com/join
+
+If you are a student or a university researcher you might be elligible for a free pro account.
+Check out your options here:

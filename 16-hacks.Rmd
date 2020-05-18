@@ -1,0 +1,111 @@
+# Collaboration Hacks
+
+What if my collaborators can't use git?
+
+## Hack 1: Dropbox (Or other cloud storage)
+Create a git repository for them in a dropbox or similar cloud storage. 
+Set the name and emailadress to match the collaborator. 
+Create a branch for them to work on and make sure that brach is checked out.
+
+When they are done working send a pull request for their branch. 
+Or merely look at the diff and decide what you want to keep. 
+
+*Advantage:* You are in full control of what can be done to that repositorysince you have full access. 
+Should you have found some mistakes you can update your collaborators version
+
+*Disadvantage:* Potentially messy.
+
+## Hack 2: Overleaf
+Overleaf can be set up to push to github. 
+Furthermore, you can clone the whole project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

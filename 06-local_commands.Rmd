@@ -1,0 +1,8 @@
+# Git commands for the local repository
+ 
+git init will create a .git folder which is hidden. This initializes a repository
+git add will put files in a staging area
+git status will show differences between staging area and working tree
+git commit will take everything that is in the staging area and put in in the local repository
+
+ git clean -f 		deletes all untracked files

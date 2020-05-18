@@ -1,0 +1,13 @@
+# Basic concepts
+
+If you understand these basic concepts you are well equipped to conquer git.
+
+## Working directory
+
+## Staging area
+
+## History
+
+## Remote
+
+## Stash

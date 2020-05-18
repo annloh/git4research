@@ -1,0 +1,28 @@
+git notes
+
+#.gitignore
+
+create a global gitignore
+that is valid for all repostories but only for your user 
+
+git config --global core.excludesfile=/home/peterl/.gitignore       ##<filepath>
+global .gitignore
+*.orig
+Should you ever need them they can be reconstructed.
+
+#merge
+.orig are created when merge conflicts exist.
+They remain even after a merge. You can delete them 
+or prevent git from creating them in the first place.
+Sh
+
+git config --global mergetool.keepBackup false
+
+git branch -a
+gives remote and local branches
+
+
+git line feed linux windows
+
+Change the author of the last commit
+git commit --amend --author="Author Name <email@address.com>"

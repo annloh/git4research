@@ -1,0 +1,55 @@
+# Talking to git
+
+Your main way of communicating with git is the command line.
+Every interaction with git works in the same way.
+
+1. Determine which repository you are currently working with.
+2. Open Git bash in the folder that contains that repository.
+3. Tell git what to do.
+
+Step 3 always consists of typing 
+`git <verb>` and hitting enter.
+
+Often the verb is followed by more or less obscure other things that specify the way in which git should do the verb.
+Examples 
+
+`git commit -m '<commit message>'`
+`git add <hallo_world.txt>`
+`git checkout -b `
+`git clean -n`
+
+If you are familiar with the linux command line these letters will probably make sense to you. 
+If you are not you can either live with the fact, that what you are typing makes little obvious sense 
+or read up on it here:
+
+## Getting help
+
+If you forgot the precise command that you wanted to use you can of course google it.
+Put git also comes with a build in help.
+
+`git help <verb>`
+or
+`git <verb> --help`
+
+I'd generally recommend to google things until you feel halfway confident 
+as the git help is not exactly written for beginners.  
+
+In this introduction we will cover 3 more ways to interact with git. 
+They will be introdiced because they make your life easier for certain tasks
+plus they give you an additional sense of control by visually confirming what has happend.
+
+## gitk
+You can open gitk by typing
+`gitk --all &`
+
+This will make what you see a little prettier as it sorts by date-order
+` gitk --all --date-order &`
+
+This will open a new window with gitk.
+The `&` at the end of the line will allow you to keep using the command line while having the gitk window open.
+gitk allows you to get a good overview of your repository history. 
+Feel free to look around and see what happens if you click certain things.
+
+##gitGUI
+
+##kdiff3

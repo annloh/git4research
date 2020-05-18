@@ -1,0 +1,31 @@
+--- 
+title: "Git 4 Research"
+author: "Anna Lohmann"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+description: "This is a git-intro for researchers"
+---
+
+
+
+# Prerequisites
+
+![https://imgs.xkcd.com/comics/git.png](img/xkcd_git.png) 
+
+In this introduction we will be mainly using git from the command line (Git BASH).
+
+Whereever beneficial we will using the built-in GUI tools gitk and git-gui.
+
+git-hub will be used for remote repositories.
+
+Should you prefer point and click options for using git you need to find yourself another tutorial.
+
+## NOTE
+I will be using pointy brackets `<>` to signify that you have to input whatever your files or names are such as: 
+`<your name>`, `<filename>` or `<branch name>`. 
+The brackets themselves have to be omitted when replacing this placeholder.  
+
