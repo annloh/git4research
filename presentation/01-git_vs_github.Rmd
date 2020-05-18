@@ -11,4 +11,4 @@ plus it is not the key feature of facebook.
 The core function of git is version control and code management. You can do that locally (i.e. on your own computer) or remotely (i.e. on a server).
 Github is a provider that hosts your git controlled projects remotely.  
 It offers you everything git has to offer plus some extra features for collaboration and access control.
-There are other provoders that offer similar services such as gitlab and bitbucket.
+There are other providers that offer similar services such as gitlab and bitbucket.

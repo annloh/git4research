@@ -3,7 +3,7 @@
 You have found something on github (or elsewhere on the internet) and would like to use it as a template? Great!  
 Answer the following questions to ensure proper acknowledgement of your sources:
 
-### Are you improving a product and would the original author benefir from your improvements?
+### Are you improving a product and would the original author benefit from your improvements?
 **Fork** the repository. You will know have a replica of the original (same name, complete history). However, this is now your personal copy. 
 It will show the original authors as contributors and everyone can see when and where you started modifying the original. As git still knows
 the original history you can make changes to the repository and send a pull request to the original authors inviting them to incorporate your changes.

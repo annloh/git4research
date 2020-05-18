@@ -1,14 +1,18 @@
 # Git workflow
 
+![https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](img/workflow.png){ width=100% } 
+
 ## Feature branches
 
 
 ## Pull requests
-When you have done some work on a feature branch and would like to incorporate those changes into the master brach it is good practice to send a pull request (rather then push to teh master branch).
-A pull request is a message that lets your collaborators now that a substancial part is ready and can be reviewed. 
-This can initiate a conversation about the suggested changes. More on pull requests here:  
+When you have done some work on a feature branch and would like to incorporate those changes into the master brach it is good practice to send a pull request (rather then push to the master branch).
+A pull request is a message that lets your collaborators now that a substantial part is ready and can be reviewed. 
+This can initiate a conversation about the suggested changes. 
+More on pull requests here:  \   
 https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests#draft-pull-requests
 
 ## Tipps to make life with git easier
+
 - submit frequently
 - keep lines short (i.e. less than 80 characters when coding, one sentence when wiring in latex)

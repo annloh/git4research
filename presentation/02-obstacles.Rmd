@@ -3,5 +3,5 @@
 - Programming lingo  
 - Introductions and examples made for software developers  
 - Command line feels very nerdy and linux like  
-- Not intuitive and intransparant at first  
+- Not intuitive and intransparent at first  
 - No middle ground introductions either too basic or too complex  

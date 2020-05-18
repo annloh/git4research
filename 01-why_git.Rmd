@@ -50,13 +50,14 @@ If so then Github is a dropbox on speed.
 
 ---
 
-### Caveat
+## Caveat
+
 Depending on when you start managing a project as a git repository collaborators or people on the internet can see every single change you have ever made to the file.
 Unfortunately, this has been used against people in the past.  / 
 
 While I advocate a transparent research process, you might be taken aback by this level of transparency.
 
-There are ways to prevent this. 
+There are ways to prevent this. \  
 - Only upload a close to final version to github  
 - Collaborate on private repositories and create a new public repository once the project is in a presentable state (It doesn't actually need to be a new repository. You can also rebase the project to hide past steps)  
 - Write a disclaimer in the readme that the amount of project contribution cannot be inferred from the project history.  
@@ -66,7 +67,8 @@ Branches on public repositories are also public. The default view, however, is t
 
 ---
 
-### Is it for me?
+## Is it for me?
+
 - Do you have several versions of something but no idea what the difference between them is or how they evolved?
 - Do you find yourself copying large sections of code to play with it, try something our wihtout breaking what you already accomplished?
 - Have you ever changed something in multiple parts of your code only to figure out that that was a bad idea and the first aproach was better?

@@ -1,7 +1,7 @@
 # Blame
 
-![https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg](img/blame.jpg){ width=80% } 
+![https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg](img/blame.jpg){ width=60% } 
 
 ## Figuring our who is responsible
 
-`git blame`
+`$ git blame`

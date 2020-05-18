@@ -15,20 +15,18 @@ Rightclick anywhere in a filebrowser and click
 
 This will open a command line where you will have to enter the the commands that you find in this introduction.
 
-## General notes regarding the commad line
+## General notes regarding the command line
 
-The following should be kept in mind when usind the command line to not go completely crazy in the process:
+The following should be kept in mind when usind the command line to not go completely crazy in the process:  \  
 - Capitalization matters  
 - Spacing matters  
-- Some shortcuts like `Ctrl+c` or `Ctrl+v` won't work. You can use the right mouse key instead  
-- The tab key is your best friend as it will auto-complete or partially autocomplete anything for you 
-which greatly reduces the risk for typos  
-- The up-key is your second best friend. Pressing the up-key will automatically input the last command used.   
-This is especially useful if you got an error and just need to slightly adjust the previous input.  
+- Some shortcuts like `Ctrl+c` or `Ctrl+v` won't work. You can use the right mouse key instead.  
+- The tab key is your best friend as it will auto-complete or partially autocomplete anything for you which greatly reduces the risk for typos  
+- The up-key is your second best friend. Pressing the up-key will automatically input the last command used. This is especially useful if you got an error and just need to slightly adjust the previous input.  
 
 ## Other useful command line knowledge:
 
-`touch filename.txt`  creates a file
+`touch filename.txt`  creates a new file 
 
 `&` at the end of a line will make sure you can keep using the command line without closing whatever you opened
  

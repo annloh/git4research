@@ -18,9 +18,16 @@ This can be acchieved as following:
 
 
 ## Switching branches
-`git checkout <branchname you want to work on>`
+
+To continue working on a different bracnch you have to switch branches by checking out the branch you would like to work on.  \  
+
+`$ git checkout <branchname you want to work on>`
+
+Careful! As always with checking out, make sure to stage or stash your changes, 
+otherwise you lose work.
 
 Creating a new branch locally does not result in the remote having the same branch (and the other way around).
+
 
 ## Fetching changes after pull request
 
@@ -28,8 +35,3 @@ Creating a new branch locally does not result in the remote having the same bran
 Deletes references to remote branches which have been deleted on the server
 
 
-`$ git merge --ff-only`
-Gives a warning if the merge is not a fast-forward merge and does not go through with it
-
-`$ git merge --no-ff`
-Does fast-forward but creates a merge commit 

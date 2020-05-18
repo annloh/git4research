@@ -3,10 +3,15 @@
 Making life easier
 
 ## gitk
-You can open gitk by typing
+
+Gitk is a handy tool for the occasional sanity check. 
+It shows you the commit history and all the important information relating to the
+individual commits. It is the easiest way to quickly check things.
+
+You can open gitk by typing  \  
 `gitk --all &`
 
-This will make what you see a little prettier as it sorts by date-order
+This will make what you see a little prettier as it sorts by date-order  \  
 ` gitk --all --date-order &`
 
 This will open a new window with gitk.
@@ -14,6 +19,16 @@ The `&` at the end of the line will allow you to keep using the command line whi
 gitk allows you to get a good overview of your repository history. 
 Feel free to look around and see what happens if you click certain things.
 
-##gitGUI
+## gitGUI
 
-##kdiff3
+Though I argued againt the use of a GUI for git occasionally it can be useful to have one.
+Git actually comes with a built in GUI that can make some operations smoother.
+
+
+## kdiff3
+
+kdiff 3 is a difftool that needs to be installed separately from git.
+After installing it you will furthermore have to tell git that you would like it to use kdiff3 as a difftool.
+
+A difftool gives you a nice visual representation of the changes between commits.
+It furthermore has some nice options to streamline merging.

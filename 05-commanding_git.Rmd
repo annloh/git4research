@@ -11,20 +11,20 @@ Step 3 always consists of typing
 `git <verb>` and hitting enter.
 
 Often the verb is followed by more or less obscure other things that specify the way in which git should do the verb.
-Examples:\\ 
+Examples:  \   
 
-`git commit -m '<commit message>'`\\
-`git add <hallo_world.txt>`\\
-`git checkout -b `\\
-`git clean -n`\\
+`git commit -m '<commit message>'`  \  
+`git add <hallo_world.txt>` \  
+`git checkout -b ` \  
+`git clean -n`  \  
 
-If you are familiar with the linux command line these letters will probably make sense to you. 
-If you are not you can either live with the fact, that what you are typing makes little obvious sense or read up on it here:
+If you are familiar with the Linux command line these letters will probably make sense to you. 
+If you are not you can either live with the fact, that what you are typing makes little obvious sense or read up on it here: <add link to bash intro>
 
 ## Getting help
 
 If you forgot the precise command that you wanted to use you can of course google it.
-Put git also comes with a build in help.
+But git also comes with a build in help.
 
 `git help <verb>`
 or
@@ -33,7 +33,7 @@ or
 I'd generally recommend to google things until you feel halfway confident 
 as the git help is not exactly written for beginners.  
 
-In this introduction we will cover 3 more ways to interact with git. 
-They will be introdiced because they make your life easier for certain tasks
+In this introduction we will cover three more ways to interact with git. 
+They will be introduced because they make your life easier for certain tasks
 plus they give you an additional sense of control by visually confirming what has happend.
 

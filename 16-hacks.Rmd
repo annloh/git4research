@@ -2,25 +2,28 @@
 
 What if my collaborators can't use git?
 
-## Hack 1: Dropbox (Or other cloud storage)
-Create a git repository for them in a dropbox or similar cloud storage. 
+## Hack 1: Dropbox (or other cloud storage)
+
+Create a git repository for them in a cloud storage. 
 Set the name and emailadress to match the collaborator. 
-Create a branch for them to work on and make sure that brach is checked out.
+Create a branch for them to work on and make sure that branch is checked out.
 
 When they are done working send a pull request for their branch. 
 Or merely look at the diff and decide what you want to keep. 
 
-*Advantage:* You are in full control of what can be done to that repositorysince you have full access. 
-Should you have found some mistakes you can update your collaborators version
+*Advantage:* You are in full control of what can be done to that repository since you have full access. 
+Should you have found some mistakes you can update your collaborators version.   \  
 
 *Disadvantage:* Potentially messy.
 
-## Hack 2: Overleaf
+## Hack 2: Overleaf (For latex)
+
 Overleaf can be set up to push to github. 
 Furthermore, you can clone the whole project.
 
+*Advantage:* Easy to use.  \
 
-
+*Disadvantage:* Hideous commit messages. If your collaborator forgets to pull things get really messy.
 
 
 

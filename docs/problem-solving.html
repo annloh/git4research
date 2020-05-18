@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-05-18" />
+<meta name="date" content="2020-05-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="merging.html"/>
-<link rel="next" href="diff.html"/>
+<link rel="next" href="pull-requests.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -77,21 +77,20 @@
 <li class="chapter" data-level="2.2" data-path="getting-started.html"><a href="getting-started.html#getting-a-git-hub-account"><i class="fa fa-check"></i><b>2.2</b> Getting a git-hub account</a></li>
 <li class="chapter" data-level="2.3" data-path="getting-started.html"><a href="getting-started.html#initial-setup"><i class="fa fa-check"></i><b>2.3</b> Initial setup</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="getting-started.html"><a href="getting-started.html#setting-the-configuration-information"><i class="fa fa-check"></i><b>2.3.1</b> Setting the configuration information</a></li>
-<li class="chapter" data-level="2.3.2" data-path="getting-started.html"><a href="getting-started.html#prevent-problems-with-line-ending-important-for-collaboration-across-operating-systems"><i class="fa fa-check"></i><b>2.3.2</b> Prevent problems with line ending (important for collaboration across operating systems)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="getting-started.html"><a href="getting-started.html#line-ending"><i class="fa fa-check"></i><b>2.3.2</b> Line ending</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html"><i class="fa fa-check"></i><b>3</b> Basic background info on Git</a><ul>
 <li class="chapter" data-level="3.1" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#what-is-git"><i class="fa fa-check"></i><b>3.1</b> What is Git?</a></li>
 <li class="chapter" data-level="3.2" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#why-use-git"><i class="fa fa-check"></i><b>3.2</b> Why use git?</a></li>
 <li class="chapter" data-level="3.3" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#limitations"><i class="fa fa-check"></i><b>3.3</b> Limitations</a></li>
-<li class="chapter" data-level="3.4" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#typical-text-based-research-file-types-that-work-well-with-git"><i class="fa fa-check"></i><b>3.4</b> Typical text based research file types that work well with git</a><ul>
-<li class="chapter" data-level="3.4.1" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#caveat"><i class="fa fa-check"></i><b>3.4.1</b> Caveat</a></li>
-<li class="chapter" data-level="3.4.2" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#is-it-for-me"><i class="fa fa-check"></i><b>3.4.2</b> Is it for me?</a></li>
-</ul></li>
+<li class="chapter" data-level="3.4" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#typical-text-based-research-file-types-that-work-well-with-git"><i class="fa fa-check"></i><b>3.4</b> Typical text based research file types that work well with git</a></li>
+<li class="chapter" data-level="3.5" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#caveat"><i class="fa fa-check"></i><b>3.5</b> Caveat</a></li>
+<li class="chapter" data-level="3.6" data-path="basic-background-info-on-git.html"><a href="basic-background-info-on-git.html#is-it-for-me"><i class="fa fa-check"></i><b>3.6</b> Is it for me?</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="the-command-line.html"><a href="the-command-line.html"><i class="fa fa-check"></i><b>4</b> The command line</a><ul>
 <li class="chapter" data-level="4.1" data-path="the-command-line.html"><a href="the-command-line.html#open-git-bash"><i class="fa fa-check"></i><b>4.1</b> Open Git BASH</a></li>
-<li class="chapter" data-level="4.2" data-path="the-command-line.html"><a href="the-command-line.html#general-notes-regarding-the-commad-line"><i class="fa fa-check"></i><b>4.2</b> General notes regarding the commad line</a></li>
+<li class="chapter" data-level="4.2" data-path="the-command-line.html"><a href="the-command-line.html#general-notes-regarding-the-command-line"><i class="fa fa-check"></i><b>4.2</b> General notes regarding the command line</a></li>
 <li class="chapter" data-level="4.3" data-path="the-command-line.html"><a href="the-command-line.html#other-useful-command-line-knowledge"><i class="fa fa-check"></i><b>4.3</b> Other useful command line knowledge:</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="basic-concepts.html"><a href="basic-concepts.html"><i class="fa fa-check"></i><b>5</b> Basic concepts</a><ul>
@@ -105,12 +104,16 @@
 <li class="chapter" data-level="6.1" data-path="talking-to-git.html"><a href="talking-to-git.html#getting-help"><i class="fa fa-check"></i><b>6.1</b> Getting help</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html"><i class="fa fa-check"></i><b>7</b> Initiating a repository</a><ul>
-<li class="chapter" data-level="7.1" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#clone-existing-repository"><i class="fa fa-check"></i><b>7.1</b> Clone existing repository</a></li>
+<li class="chapter" data-level="7.1" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#clone-existing-repository"><i class="fa fa-check"></i><b>7.1</b> Clone existing repository</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#caveat-1"><i class="fa fa-check"></i><b>7.1.1</b> !Caveat</a></li>
+</ul></li>
 <li class="chapter" data-level="7.2" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#fork-existing-repository"><i class="fa fa-check"></i><b>7.2</b> Fork existing repository</a></li>
 <li class="chapter" data-level="7.3" data-path="initiating-a-repository.html"><a href="initiating-a-repository.html#create-a-new-local-repository"><i class="fa fa-check"></i><b>7.3</b> Create a new local repository</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="beyond-the-command-line.html"><a href="beyond-the-command-line.html"><i class="fa fa-check"></i><b>8</b> Beyond the command line</a><ul>
 <li class="chapter" data-level="8.1" data-path="beyond-the-command-line.html"><a href="beyond-the-command-line.html#gitk"><i class="fa fa-check"></i><b>8.1</b> gitk</a></li>
+<li class="chapter" data-level="8.2" data-path="beyond-the-command-line.html"><a href="beyond-the-command-line.html#gitgui"><i class="fa fa-check"></i><b>8.2</b> gitGUI</a></li>
+<li class="chapter" data-level="8.3" data-path="beyond-the-command-line.html"><a href="beyond-the-command-line.html#kdiff3"><i class="fa fa-check"></i><b>8.3</b> kdiff3</a></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="git-commands-for-the-local-repository.html"><a href="git-commands-for-the-local-repository.html"><i class="fa fa-check"></i><b>9</b> Git commands for the local repository</a></li>
 <li class="chapter" data-level="10" data-path="git-commands-for-the-remote-repository.html"><a href="git-commands-for-the-remote-repository.html"><i class="fa fa-check"></i><b>10</b> Git commands for the remote repository</a></li>
@@ -132,36 +135,38 @@
 <li class="chapter" data-level="14.1" data-path="problem-solving.html"><a href="problem-solving.html#push-against-resistence"><i class="fa fa-check"></i><b>14.1</b> Push against resistence</a></li>
 <li class="chapter" data-level="14.2" data-path="problem-solving.html"><a href="problem-solving.html#you-ammended-after-pushing-to-the-remote"><i class="fa fa-check"></i><b>14.2</b> You ammended after pushing to the remote</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="diff.html"><a href="diff.html"><i class="fa fa-check"></i><b>15</b> Diff</a><ul>
-<li class="chapter" data-level="15.1" data-path="diff.html"><a href="diff.html#comparing-current-changes"><i class="fa fa-check"></i><b>15.1</b> Comparing current changes</a></li>
-<li class="chapter" data-level="15.2" data-path="diff.html"><a href="diff.html#comparing-arbitrary-diffs"><i class="fa fa-check"></i><b>15.2</b> Comparing arbitrary diffs</a></li>
+<li class="chapter" data-level="15" data-path="pull-requests.html"><a href="pull-requests.html"><i class="fa fa-check"></i><b>15</b> Pull requests</a></li>
+<li class="chapter" data-level="16" data-path="diff.html"><a href="diff.html"><i class="fa fa-check"></i><b>16</b> Diff</a><ul>
+<li class="chapter" data-level="16.1" data-path="diff.html"><a href="diff.html#comparing-current-changes"><i class="fa fa-check"></i><b>16.1</b> Comparing current changes</a></li>
+<li class="chapter" data-level="16.2" data-path="diff.html"><a href="diff.html#comparing-arbitrary-commits"><i class="fa fa-check"></i><b>16.2</b> Comparing arbitrary commits</a></li>
+<li class="chapter" data-level="16.3" data-path="diff.html"><a href="diff.html#difftool-kdiff3"><i class="fa fa-check"></i><b>16.3</b> Difftool (kdiff3)</a></li>
 </ul></li>
-<li class="chapter" data-level="16" data-path="blame.html"><a href="blame.html"><i class="fa fa-check"></i><b>16</b> Blame</a><ul>
-<li class="chapter" data-level="16.1" data-path="blame.html"><a href="blame.html#figuring-our-who-is-responsible"><i class="fa fa-check"></i><b>16.1</b> Figuring our who is responsible</a></li>
+<li class="chapter" data-level="17" data-path="blame.html"><a href="blame.html"><i class="fa fa-check"></i><b>17</b> Blame</a><ul>
+<li class="chapter" data-level="17.1" data-path="blame.html"><a href="blame.html#figuring-our-who-is-responsible"><i class="fa fa-check"></i><b>17.1</b> Figuring our who is responsible</a></li>
 </ul></li>
-<li class="chapter" data-level="17" data-path="git-workflow.html"><a href="git-workflow.html"><i class="fa fa-check"></i><b>17</b> Git workflow</a><ul>
-<li class="chapter" data-level="17.1" data-path="git-workflow.html"><a href="git-workflow.html#feature-branches"><i class="fa fa-check"></i><b>17.1</b> Feature branches</a></li>
-<li class="chapter" data-level="17.2" data-path="git-workflow.html"><a href="git-workflow.html#pull-requests"><i class="fa fa-check"></i><b>17.2</b> Pull requests</a></li>
-<li class="chapter" data-level="17.3" data-path="git-workflow.html"><a href="git-workflow.html#tipps-to-make-life-with-git-easier"><i class="fa fa-check"></i><b>17.3</b> Tipps to make life with git easier</a></li>
+<li class="chapter" data-level="18" data-path="git-workflow.html"><a href="git-workflow.html"><i class="fa fa-check"></i><b>18</b> Git workflow</a><ul>
+<li class="chapter" data-level="18.1" data-path="git-workflow.html"><a href="git-workflow.html#feature-branches"><i class="fa fa-check"></i><b>18.1</b> Feature branches</a></li>
+<li class="chapter" data-level="18.2" data-path="git-workflow.html"><a href="git-workflow.html#pull-requests-1"><i class="fa fa-check"></i><b>18.2</b> Pull requests</a></li>
+<li class="chapter" data-level="18.3" data-path="git-workflow.html"><a href="git-workflow.html#tipps-to-make-life-with-git-easier"><i class="fa fa-check"></i><b>18.3</b> Tipps to make life with git easier</a></li>
 </ul></li>
-<li class="chapter" data-level="18" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html"><i class="fa fa-check"></i><b>18</b> Collaboration Hacks</a><ul>
-<li class="chapter" data-level="18.1" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html#hack-1-dropbox-or-other-cloud-storage"><i class="fa fa-check"></i><b>18.1</b> Hack 1: Dropbox (Or other cloud storage)</a></li>
-<li class="chapter" data-level="18.2" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html#hack-2-overleaf"><i class="fa fa-check"></i><b>18.2</b> Hack 2: Overleaf</a></li>
+<li class="chapter" data-level="19" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html"><i class="fa fa-check"></i><b>19</b> Collaboration Hacks</a><ul>
+<li class="chapter" data-level="19.1" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html#hack-1-dropbox-or-other-cloud-storage"><i class="fa fa-check"></i><b>19.1</b> Hack 1: Dropbox (or other cloud storage)</a></li>
+<li class="chapter" data-level="19.2" data-path="collaboration-hacks.html"><a href="collaboration-hacks.html#hack-2-overleaf-for-latex"><i class="fa fa-check"></i><b>19.2</b> Hack 2: Overleaf (For latex)</a></li>
 </ul></li>
-<li class="chapter" data-level="19" data-path="other-peoples-code.html"><a href="other-peoples-code.html"><i class="fa fa-check"></i><b>19</b> Other peoples code</a><ul>
-<li class="chapter" data-level="19.0.1" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-improving-a-product-and-would-the-original-author-benefir-from-your-improvements"><i class="fa fa-check"></i><b>19.0.1</b> Are you improving a product and would the original author benefir from your improvements?</a></li>
-<li class="chapter" data-level="19.0.2" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-just-stealing-some-code-to-get-you-started"><i class="fa fa-check"></i><b>19.0.2</b> Are you just stealing some code to get you started?</a></li>
+<li class="chapter" data-level="20" data-path="other-peoples-code.html"><a href="other-peoples-code.html"><i class="fa fa-check"></i><b>20</b> Other peoples code</a><ul>
+<li class="chapter" data-level="20.0.1" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-improving-a-product-and-would-the-original-author-benefit-from-your-improvements"><i class="fa fa-check"></i><b>20.0.1</b> Are you improving a product and would the original author benefit from your improvements?</a></li>
+<li class="chapter" data-level="20.0.2" data-path="other-peoples-code.html"><a href="other-peoples-code.html#are-you-just-stealing-some-code-to-get-you-started"><i class="fa fa-check"></i><b>20.0.2</b> Are you just stealing some code to get you started?</a></li>
 </ul></li>
-<li class="chapter" data-level="20" data-path="ressources.html"><a href="ressources.html"><i class="fa fa-check"></i><b>20</b> Ressources</a><ul>
-<li class="chapter" data-level="20.1" data-path="ressources.html"><a href="ressources.html#pro-git"><i class="fa fa-check"></i><b>20.1</b> Pro Git</a></li>
-<li class="chapter" data-level="20.2" data-path="ressources.html"><a href="ressources.html#youtube-videos"><i class="fa fa-check"></i><b>20.2</b> YouTube videos</a></li>
-<li class="chapter" data-level="20.3" data-path="ressources.html"><a href="ressources.html#troubleshooting"><i class="fa fa-check"></i><b>20.3</b> Troubleshooting</a></li>
-<li class="chapter" data-level="20.4" data-path="ressources.html"><a href="ressources.html#cheat-sheet"><i class="fa fa-check"></i><b>20.4</b> Cheat Sheet</a></li>
-<li class="chapter" data-level="20.5" data-path="ressources.html"><a href="ressources.html#more-info-on-specific-topics"><i class="fa fa-check"></i><b>20.5</b> More Info on specific topics</a></li>
-<li class="chapter" data-level="20.6" data-path="ressources.html"><a href="ressources.html#atomic-commits"><i class="fa fa-check"></i><b>20.6</b> Atomic Commits</a></li>
-<li class="chapter" data-level="20.7" data-path="ressources.html"><a href="ressources.html#commit-messages-1"><i class="fa fa-check"></i><b>20.7</b> Commit messages</a><ul>
-<li class="chapter" data-level="20.7.1" data-path="ressources.html"><a href="ressources.html#rebasing"><i class="fa fa-check"></i><b>20.7.1</b> Rebasing</a></li>
-<li class="chapter" data-level="20.7.2" data-path="ressources.html"><a href="ressources.html#stashing"><i class="fa fa-check"></i><b>20.7.2</b> Stashing</a></li>
+<li class="chapter" data-level="21" data-path="ressources.html"><a href="ressources.html"><i class="fa fa-check"></i><b>21</b> Ressources</a><ul>
+<li class="chapter" data-level="21.1" data-path="ressources.html"><a href="ressources.html#pro-git"><i class="fa fa-check"></i><b>21.1</b> Pro Git</a></li>
+<li class="chapter" data-level="21.2" data-path="ressources.html"><a href="ressources.html#youtube-videos"><i class="fa fa-check"></i><b>21.2</b> YouTube videos</a></li>
+<li class="chapter" data-level="21.3" data-path="ressources.html"><a href="ressources.html#troubleshooting"><i class="fa fa-check"></i><b>21.3</b> Troubleshooting</a></li>
+<li class="chapter" data-level="21.4" data-path="ressources.html"><a href="ressources.html#cheat-sheet"><i class="fa fa-check"></i><b>21.4</b> Cheat Sheet</a></li>
+<li class="chapter" data-level="21.5" data-path="ressources.html"><a href="ressources.html#more-info-on-specific-topics"><i class="fa fa-check"></i><b>21.5</b> More Info on specific topics</a></li>
+<li class="chapter" data-level="21.6" data-path="ressources.html"><a href="ressources.html#atomic-commits"><i class="fa fa-check"></i><b>21.6</b> Atomic Commits</a></li>
+<li class="chapter" data-level="21.7" data-path="ressources.html"><a href="ressources.html#commit-messages-1"><i class="fa fa-check"></i><b>21.7</b> Commit messages</a><ul>
+<li class="chapter" data-level="21.7.1" data-path="ressources.html"><a href="ressources.html#rebasing"><i class="fa fa-check"></i><b>21.7.1</b> Rebasing</a></li>
+<li class="chapter" data-level="21.7.2" data-path="ressources.html"><a href="ressources.html#stashing"><i class="fa fa-check"></i><b>21.7.2</b> Stashing</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -196,12 +201,11 @@
 <div id="you-ammended-after-pushing-to-the-remote" class="section level2">
 <h2><span class="header-section-number">14.2</span> You ammended after pushing to the remote</h2>
 <p>Git will not let you push after ammending because the ammend changed the commit and it does not match the remote one anymore.
-Git hence recommends that you pull first. That is not what you want because you have just changed that lst commit with ammend.
+Git hence recommends that you pull first. That is not what you want because you have just changed that last commit with ammend.
 You will hence have to force the push.</p>
-<p><code>git push --force-with-lease</code>
-This way of forcing the push is preferred over push -f because the
-with-lease will check whether there are any additional changes on the remote that you had not fetched yet</p>
-
+<p><code>$ git push --force-with-lease</code>  
+This way of forcing the push is preferred over <code>$ git push -f</code> because the
+with-lease will check whether there are any additional changes on the remote that you had not fetched yet.</p>
 
 </div>
 </div>
@@ -211,7 +215,7 @@ with-lease will check whether there are any additional changes on the remote tha
         </div>
       </div>
 <a href="merging.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="diff.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="pull-requests.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

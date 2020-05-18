@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Talking to git | Git 4 Research</title>
+  <title>Chapter 15 Pull requests | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 6 Talking to git | Git 4 Research" />
+  <meta property="og:title" content="Chapter 15 Pull requests | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Talking to git | Git 4 Research" />
+  <meta name="twitter:title" content="Chapter 15 Pull requests | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="basic-concepts.html"/>
-<link rel="next" href="initiating-a-repository.html"/>
+<link rel="prev" href="problem-solving.html"/>
+<link rel="next" href="diff.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -189,47 +189,21 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="talking-to-git" class="section level1">
-<h1><span class="header-section-number">Chapter 6</span> Talking to git</h1>
-<p>Your main way of communicating with git is the command line.
-Every interaction with git works in the same way.</p>
-<ol style="list-style-type: decimal">
-<li>Determine which repository you are currently working with.</li>
-<li>Open Git bash in the folder that contains that repository.</li>
-<li>Tell git what to do.</li>
-</ol>
-<p>Step 3 always consists of typing
-<code>git &lt;verb&gt;</code> and hitting enter.</p>
-<p>Often the verb is followed by more or less obscure other things that specify the way in which git should do the verb.
-Examples:  </p>
-<p><code>git commit -m '&lt;commit message&gt;'</code>  
-<code>git add &lt;hallo_world.txt&gt;</code>  
-<code>git checkout -b</code>  
-<code>git clean -n</code>  </p>
-<p>If you are familiar with the Linux command line these letters will probably make sense to you.
-If you are not you can either live with the fact, that what you are typing makes little obvious sense or read up on it here: <add link to bash intro></p>
-<div id="getting-help" class="section level2">
-<h2><span class="header-section-number">6.1</span> Getting help</h2>
-<p>If you forgot the precise command that you wanted to use you can of course google it.
-But git also comes with a build in help.</p>
-<p><code>git help &lt;verb&gt;</code>
-or
-<code>git &lt;verb&gt; --help</code></p>
-<p>I’d generally recommend to google things until you feel halfway confident
-as the git help is not exactly written for beginners.</p>
-<p>In this introduction we will cover three more ways to interact with git.
-They will be introduced because they make your life easier for certain tasks
-plus they give you an additional sense of control by visually confirming what has happend.</p>
+<div id="pull-requests" class="section level1">
+<h1><span class="header-section-number">Chapter 15</span> Pull requests</h1>
+<p>A pull request (which should actually be called a merge request) is a commit that a collaborator
+suggests should be merged.</p>
+<p>Git-hub offers special features for pull requests that make it easy to review and annotate the suggested code changes.</p>
+<p>It is possible to add additional commits to a oull request if it has not been accepted yet.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="basic-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="initiating-a-repository.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="problem-solving.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="diff.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

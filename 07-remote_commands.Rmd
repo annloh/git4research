@@ -1,5 +1,21 @@
 # Git commands for the remote repository
 
-`$ git push` will take your commit and take it to a remote repository (e.g. github)
-`$ git pull` will get the latest changes  from a remote repository
-`$ git clone` will copy a remote repository to your local folder
+`$ git push` will take your commit and take it to a remote repository (e.g. github)  \  
+`$ git fetch` will get the latest changes  from a remote repository (but not integrate them i.e. merge them with your local files) \  
+`$ git clone` will copy a remote repository to your local folder  \  
+
+
+One of the standard commands covered in all git intros is `$ git pull`.
+There should not ever be a reason to use it but a lot of reasons against it so its use is not recommended.
+`$ git pull` is equivalent to `$ git fetch` plus `$ git merge`.
+
+The only reason to ever use `$git pull` is if there are changes on the remote that you do not have locally. (For example from a collaborator, or a different computer that you sync via the remote.)
+
+If there is something on the remote that you don't have in your local repository there are three different scenarios
+(1) You want the changes. \  
+(2) You don't want the changes. \  
+(3) You want part of the changes.  \  
+
+Only the first option is acchieved by `$ git pull`.  \  
+
+The more likely scenario is you might want to check out the changes and then decide on (1),(2) or (3). Hence, first `$git fetch` and then (maybe) `$ git merge $
