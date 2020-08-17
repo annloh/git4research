@@ -9,11 +9,53 @@ other using the git verbs you are good to go.
 If you understand these basic concepts you are well equipped to conquer git.
 
 ## Working directory
+The working directory are the files you can see on your computer.
+Git is like a time machine, that can send you back in time (i.e. older commits) and even to different universes (i.e. braches). The files you find at those coordinates (i.e. commit sha) is what constitutes the working directory.
+Unlike in time travelling in movies you cannot accidentally alter the time line unless you commit your changes. This is an important concept to keep in mind. What you can see now on your screen can be gone in a second despite saving if it has not been staged or commited.
+
+To travel in time and space you use `$git checkout <commit hash>`. 
+
 
 ## Staging area
 
-## History
+The staging are is your way of telling git "look what I have done". 
+You can think of it like a nomination for a competition. 
+A team might be bigger than those few going to the competition (i.e. you might have a lot more files in your folder) but unless they are nominated they are not eligible for taking part. 
+The command that will move files from the working directory to the staging are is `$git add <filename>`. 
+Since typing filenames can be cumbersome try using `tab` for autocomplete. 
+If you want to stage all the files you have been currently working on you can use `$git add .`.
+
+
+
+## History (aka index)
+
+The history lives in the .git folder which is created when you initiate a git repository. 
+It contains the the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a buiding instruction. So whenever you travel to a certain commit git will reassemble that state.
+
 
 ## Remote
+The remote is a second version of your repository that lives somewhere else. 
+That somewhereelse usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.
+
+The remote is usually used to have a decentralized hub that allows you to keep your work synchonized between different systems or different collaborators.
+
+
 
 ## Stash
+
+As explained above whatever is not staged, or commited can potentially be lost. 
+So what do you do if you have made some changes, that you are not happy with yet, 
+but you need to look somthing up in an old version or a collaborator needs some help on a branch? 
+You can either commit those changes to a new branch. 
+`$git checkout -b <new-branch>` 
+does not kill your working directory. So committing to a new branch is save.
+
+Altenatively you can temporarily stash them. 
+Stashing basically means they become a lonely  commit not associated with any branch. 
+
+`$git stash`
+
+If you want to get the stashed commit back to the working directory you can use
+$git pop` which is equivalent to `$git apply` and `$git drop`
+meaning the stash will no longer stick around after the last clean-up.
+<!-- Is that correct? -->

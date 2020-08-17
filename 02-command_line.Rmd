@@ -29,5 +29,9 @@ The following should be kept in mind when usind the command line to not go compl
 `touch filename.txt`  creates a new file 
 
 `&` at the end of a line will make sure you can keep using the command line without closing whatever you opened
+
+Important note!
+
+If the command line is a stumbling block for you and preventing you from using GIT then by all means please get a GUI. For me personally the commandline was the only way I finally got git but there are folks for whom it has been the other way round. So whatever makes you not hate git less it what you shoud be using. And if after a while you are not toally in love with git try the other option.
  
 
