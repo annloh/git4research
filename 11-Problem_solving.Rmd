@@ -34,7 +34,7 @@ You would furthermore like to squash all these commits to prepare for code revie
 1) Create a new branch  
 `$ git branch <new-branch>` (this only created the new branch and does not check it out which is what we want)
 2) Reset the master branch to the state you liked   
-`$ git reset -hard <target commit hash>`  
+`$ git reset --hard <target commit hash>`  
 3) Check out the new branch  
 `$ git checkout <new-branch>  
 4) Soft reset the branch to the commit you want it to start (e.g. master)  

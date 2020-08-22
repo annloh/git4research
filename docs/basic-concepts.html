@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Basic concepts | Git 4 Research</title>
+  <title>5 Basic concepts | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Basic concepts | Git 4 Research" />
+  <meta property="og:title" content="5 Basic concepts | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Basic concepts | Git 4 Research" />
+  <meta name="twitter:title" content="5 Basic concepts | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-05-19" />
+<meta name="date" content="2020-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,7 +97,7 @@
 <li class="chapter" data-level="5" data-path="basic-concepts.html"><a href="basic-concepts.html"><i class="fa fa-check"></i><b>5</b> Basic concepts</a><ul>
 <li class="chapter" data-level="5.1" data-path="basic-concepts.html"><a href="basic-concepts.html#working-directory"><i class="fa fa-check"></i><b>5.1</b> Working directory</a></li>
 <li class="chapter" data-level="5.2" data-path="basic-concepts.html"><a href="basic-concepts.html#staging-area"><i class="fa fa-check"></i><b>5.2</b> Staging area</a></li>
-<li class="chapter" data-level="5.3" data-path="basic-concepts.html"><a href="basic-concepts.html#history"><i class="fa fa-check"></i><b>5.3</b> History</a></li>
+<li class="chapter" data-level="5.3" data-path="basic-concepts.html"><a href="basic-concepts.html#history-aka-index"><i class="fa fa-check"></i><b>5.3</b> History (aka index)</a></li>
 <li class="chapter" data-level="5.4" data-path="basic-concepts.html"><a href="basic-concepts.html#remote"><i class="fa fa-check"></i><b>5.4</b> Remote</a></li>
 <li class="chapter" data-level="5.5" data-path="basic-concepts.html"><a href="basic-concepts.html#stash"><i class="fa fa-check"></i><b>5.5</b> Stash</a></li>
 </ul></li>
@@ -133,9 +133,10 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="merging.html"><a href="merging.html"><i class="fa fa-check"></i><b>13</b> Merging</a></li>
 <li class="chapter" data-level="14" data-path="problem-solving.html"><a href="problem-solving.html"><i class="fa fa-check"></i><b>14</b> Problem solving</a><ul>
-<li class="chapter" data-level="14.1" data-path="problem-solving.html"><a href="problem-solving.html#you-dont-like-your-changes"><i class="fa fa-check"></i><b>14.1</b> You don’t like your changes</a></li>
+<li class="chapter" data-level="14.1" data-path="problem-solving.html"><a href="problem-solving.html#discard-changes"><i class="fa fa-check"></i><b>14.1</b> Discard changes</a></li>
 <li class="chapter" data-level="14.2" data-path="problem-solving.html"><a href="problem-solving.html#push-against-resistence"><i class="fa fa-check"></i><b>14.2</b> Push against resistence</a></li>
-<li class="chapter" data-level="14.3" data-path="problem-solving.html"><a href="problem-solving.html#you-ammended-after-pushing-to-the-remote"><i class="fa fa-check"></i><b>14.3</b> You ammended after pushing to the remote</a></li>
+<li class="chapter" data-level="14.3" data-path="problem-solving.html"><a href="problem-solving.html#ammend-after-pushing-to-remote"><i class="fa fa-check"></i><b>14.3</b> Ammend after pushing to remote</a></li>
+<li class="chapter" data-level="14.4" data-path="problem-solving.html"><a href="problem-solving.html#clean-up-master"><i class="fa fa-check"></i><b>14.4</b> Clean up master</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="pull-requests.html"><a href="pull-requests.html"><i class="fa fa-check"></i><b>15</b> Pull requests</a></li>
 <li class="chapter" data-level="16" data-path="diff.html"><a href="diff.html"><i class="fa fa-check"></i><b>16</b> Diff</a><ul>
@@ -201,7 +202,7 @@
 
             <section class="normal" id="section-">
 <div id="basic-concepts" class="section level1">
-<h1><span class="header-section-number">Chapter 5</span> Basic concepts</h1>
+<h1><span class="header-section-number">5</span> Basic concepts</h1>
 <p>The following figure shows an overview of the git logic.
 If you understand what is going on there and how the individual parts relate to each
 other using the git verbs you are good to go.</p>
@@ -209,18 +210,46 @@ other using the git verbs you are good to go.</p>
 <p>If you understand these basic concepts you are well equipped to conquer git.</p>
 <div id="working-directory" class="section level2">
 <h2><span class="header-section-number">5.1</span> Working directory</h2>
+<p>The working directory are the files you can see on your computer.
+Git is like a time machine, that can send you back in time (i.e. older commits) and even to different universes (i.e. braches). The files you find at those coordinates (i.e. commit sha) is what constitutes the working directory.
+Unlike in time travelling in movies you cannot accidentally alter the time line unless you commit your changes. This is an important concept to keep in mind. What you can see now on your screen can be gone in a second despite saving if it has not been staged or commited.</p>
+<p>To travel in time and space you use <code>$git checkout &lt;commit hash&gt;</code>.</p>
 </div>
 <div id="staging-area" class="section level2">
 <h2><span class="header-section-number">5.2</span> Staging area</h2>
+<p>The staging are is your way of telling git “look what I have done”.
+You can think of it like a nomination for a competition.
+A team might be bigger than those few going to the competition (i.e. you might have a lot more files in your folder) but unless they are nominated they are not eligible for taking part.
+The command that will move files from the working directory to the staging are is <code>$git add &lt;filename&gt;</code>.
+Since typing filenames can be cumbersome try using <code>tab</code> for autocomplete.
+If you want to stage all the files you have been currently working on you can use <code>$git add .</code>.</p>
 </div>
-<div id="history" class="section level2">
-<h2><span class="header-section-number">5.3</span> History</h2>
+<div id="history-aka-index" class="section level2">
+<h2><span class="header-section-number">5.3</span> History (aka index)</h2>
+<p>The history lives in the .git folder which is created when you initiate a git repository.
+It contains the the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a buiding instruction. So whenever you travel to a certain commit git will reassemble that state.</p>
 </div>
 <div id="remote" class="section level2">
 <h2><span class="header-section-number">5.4</span> Remote</h2>
+<p>The remote is a second version of your repository that lives somewhere else.
+That somewhereelse usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.</p>
+<p>The remote is usually used to have a decentralized hub that allows you to keep your work synchonized between different systems or different collaborators.</p>
 </div>
 <div id="stash" class="section level2">
 <h2><span class="header-section-number">5.5</span> Stash</h2>
+<p>As explained above whatever is not staged, or commited can potentially be lost.
+So what do you do if you have made some changes, that you are not happy with yet,
+but you need to look somthing up in an old version or a collaborator needs some help on a branch?
+You can either commit those changes to a new branch.
+<code>$git checkout -b &lt;new-branch&gt;</code>
+does not kill your working directory. So committing to a new branch is save.</p>
+<p>Altenatively you can temporarily stash them.
+Stashing basically means they become a lonely commit not associated with any branch.</p>
+<p><code>$git stash</code></p>
+<p>If you want to get the stashed commit back to the working directory you can use
+<span class="math inline">\(git pop` which is equivalent to `\)</span>git apply<code>and</code>$git drop`
+meaning the stash will no longer stick around after the last clean-up.
+<!-- Is that correct? --></p>
 
 </div>
 </div>
@@ -280,6 +309,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

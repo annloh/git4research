@@ -2,12 +2,12 @@
 title: "Git 4 Research"
 author: "Anna Lohmann"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+bibliography: book.bib
+description: This is a git-intro for researchers
 documentclass: book
-bibliography: [book.bib]
-biblio-style: apalike
 link-citations: yes
-description: "This is a git-intro for researchers"
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 
 ![https://imgs.xkcd.com/comics/git.png](img/xkcd_git.png){ width=60% } 

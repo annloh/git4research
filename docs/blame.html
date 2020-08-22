@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 17 Blame | Git 4 Research</title>
+  <title>17 Blame | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 17 Blame | Git 4 Research" />
+  <meta property="og:title" content="17 Blame | Git 4 Research" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 17 Blame | Git 4 Research" />
+  <meta name="twitter:title" content="17 Blame | Git 4 Research" />
   
   <meta name="twitter:description" content="This is a git-intro for researchers" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-05-19" />
+<meta name="date" content="2020-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -97,7 +97,7 @@
 <li class="chapter" data-level="5" data-path="basic-concepts.html"><a href="basic-concepts.html"><i class="fa fa-check"></i><b>5</b> Basic concepts</a><ul>
 <li class="chapter" data-level="5.1" data-path="basic-concepts.html"><a href="basic-concepts.html#working-directory"><i class="fa fa-check"></i><b>5.1</b> Working directory</a></li>
 <li class="chapter" data-level="5.2" data-path="basic-concepts.html"><a href="basic-concepts.html#staging-area"><i class="fa fa-check"></i><b>5.2</b> Staging area</a></li>
-<li class="chapter" data-level="5.3" data-path="basic-concepts.html"><a href="basic-concepts.html#history"><i class="fa fa-check"></i><b>5.3</b> History</a></li>
+<li class="chapter" data-level="5.3" data-path="basic-concepts.html"><a href="basic-concepts.html#history-aka-index"><i class="fa fa-check"></i><b>5.3</b> History (aka index)</a></li>
 <li class="chapter" data-level="5.4" data-path="basic-concepts.html"><a href="basic-concepts.html#remote"><i class="fa fa-check"></i><b>5.4</b> Remote</a></li>
 <li class="chapter" data-level="5.5" data-path="basic-concepts.html"><a href="basic-concepts.html#stash"><i class="fa fa-check"></i><b>5.5</b> Stash</a></li>
 </ul></li>
@@ -133,9 +133,10 @@
 </ul></li>
 <li class="chapter" data-level="13" data-path="merging.html"><a href="merging.html"><i class="fa fa-check"></i><b>13</b> Merging</a></li>
 <li class="chapter" data-level="14" data-path="problem-solving.html"><a href="problem-solving.html"><i class="fa fa-check"></i><b>14</b> Problem solving</a><ul>
-<li class="chapter" data-level="14.1" data-path="problem-solving.html"><a href="problem-solving.html#you-dont-like-your-changes"><i class="fa fa-check"></i><b>14.1</b> You don’t like your changes</a></li>
+<li class="chapter" data-level="14.1" data-path="problem-solving.html"><a href="problem-solving.html#discard-changes"><i class="fa fa-check"></i><b>14.1</b> Discard changes</a></li>
 <li class="chapter" data-level="14.2" data-path="problem-solving.html"><a href="problem-solving.html#push-against-resistence"><i class="fa fa-check"></i><b>14.2</b> Push against resistence</a></li>
-<li class="chapter" data-level="14.3" data-path="problem-solving.html"><a href="problem-solving.html#you-ammended-after-pushing-to-the-remote"><i class="fa fa-check"></i><b>14.3</b> You ammended after pushing to the remote</a></li>
+<li class="chapter" data-level="14.3" data-path="problem-solving.html"><a href="problem-solving.html#ammend-after-pushing-to-remote"><i class="fa fa-check"></i><b>14.3</b> Ammend after pushing to remote</a></li>
+<li class="chapter" data-level="14.4" data-path="problem-solving.html"><a href="problem-solving.html#clean-up-master"><i class="fa fa-check"></i><b>14.4</b> Clean up master</a></li>
 </ul></li>
 <li class="chapter" data-level="15" data-path="pull-requests.html"><a href="pull-requests.html"><i class="fa fa-check"></i><b>15</b> Pull requests</a></li>
 <li class="chapter" data-level="16" data-path="diff.html"><a href="diff.html"><i class="fa fa-check"></i><b>16</b> Diff</a><ul>
@@ -201,7 +202,7 @@
 
             <section class="normal" id="section-">
 <div id="blame" class="section level1">
-<h1><span class="header-section-number">Chapter 17</span> Blame</h1>
+<h1><span class="header-section-number">17</span> Blame</h1>
 <div class="figure">
 <img src="img/blame.jpg" alt="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" style="width:60.0%" />
 <p class="caption"><a href="https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg" class="uri">https://img.devrant.com/devrant/rant/r_811491_uTXmv.jpg</a></p>
@@ -268,6 +269,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
