@@ -18,7 +18,7 @@ To travel in time and space you use `$git checkout <commit hash>`.
 
 ## Staging area
 
-The staging are is your way of telling git "look what I have done". 
+The staging area is your way of telling git "look what I have done". 
 You can think of it like a nomination for a competition. 
 A team might be bigger than those few going to the competition (i.e. you might have a lot more files in your folder) but unless they are nominated they are not eligible for taking part. 
 The command that will move files from the working directory to the staging are is `$git add <filename>`. 
@@ -30,12 +30,12 @@ If you want to stage all the files you have been currently working on you can us
 ## History (aka index)
 
 The history lives in the .git folder which is created when you initiate a git repository. 
-It contains the the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a buiding instruction. So whenever you travel to a certain commit git will reassemble that state.
+It contains the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a building instruction. So whenever you travel to a certain commit git will reassemble that state.
 
 
 ## Remote
 The remote is a second version of your repository that lives somewhere else. 
-That somewhereelse usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.
+That somewhere else usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.
 
 The remote is usually used to have a decentralized hub that allows you to keep your work synchonized between different systems or different collaborators.
 
@@ -45,7 +45,7 @@ The remote is usually used to have a decentralized hub that allows you to keep y
 
 As explained above whatever is not staged, or commited can potentially be lost. 
 So what do you do if you have made some changes, that you are not happy with yet, 
-but you need to look somthing up in an old version or a collaborator needs some help on a branch? 
+but you need to look something up in an old version or a collaborator needs some help on a branch? 
 You can either commit those changes to a new branch. 
 `$git checkout -b <new-branch>` 
 does not kill your working directory. So committing to a new branch is save.
