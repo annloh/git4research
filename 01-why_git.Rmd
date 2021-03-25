@@ -47,6 +47,7 @@ If so then Github is a dropbox on speed.
 - *.tex  (Latex files)
 - *.bib  (Bibliography files)
 - *.sps  (SPSS analysis scripts)
+- *.do   (STATA do file)
 
 ---
 
