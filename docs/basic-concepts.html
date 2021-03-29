@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5 Basic concepts | Git 4 Research</title>
   <meta name="description" content="This is a git-intro for researchers" />
-  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5 Basic concepts | Git 4 Research" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Anna Lohmann" />
 
 
-<meta name="date" content="2020-08-22" />
+<meta name="date" content="2021-03-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +50,7 @@
 
 
 
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 
 
 
@@ -217,7 +218,7 @@ Unlike in time travelling in movies you cannot accidentally alter the time line 
 </div>
 <div id="staging-area" class="section level2">
 <h2><span class="header-section-number">5.2</span> Staging area</h2>
-<p>The staging are is your way of telling git “look what I have done”.
+<p>The staging area is your way of telling git “look what I have done”.
 You can think of it like a nomination for a competition.
 A team might be bigger than those few going to the competition (i.e. you might have a lot more files in your folder) but unless they are nominated they are not eligible for taking part.
 The command that will move files from the working directory to the staging are is <code>$git add &lt;filename&gt;</code>.
@@ -227,19 +228,19 @@ If you want to stage all the files you have been currently working on you can us
 <div id="history-aka-index" class="section level2">
 <h2><span class="header-section-number">5.3</span> History (aka index)</h2>
 <p>The history lives in the .git folder which is created when you initiate a git repository.
-It contains the the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a buiding instruction. So whenever you travel to a certain commit git will reassemble that state.</p>
+It contains the original state of the files upon their initial submission as well as a log of changes for each commit. Kind of like a building instruction. So whenever you travel to a certain commit git will reassemble that state.</p>
 </div>
 <div id="remote" class="section level2">
 <h2><span class="header-section-number">5.4</span> Remote</h2>
 <p>The remote is a second version of your repository that lives somewhere else.
-That somewhereelse usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.</p>
+That somewhere else usually is in the cloud, but it could theoretically also be somewhere else on your computer, or another (personal) computer.</p>
 <p>The remote is usually used to have a decentralized hub that allows you to keep your work synchonized between different systems or different collaborators.</p>
 </div>
 <div id="stash" class="section level2">
 <h2><span class="header-section-number">5.5</span> Stash</h2>
 <p>As explained above whatever is not staged, or commited can potentially be lost.
 So what do you do if you have made some changes, that you are not happy with yet,
-but you need to look somthing up in an old version or a collaborator needs some help on a branch?
+but you need to look something up in an old version or a collaborator needs some help on a branch?
 You can either commit those changes to a new branch.
 <code>$git checkout -b &lt;new-branch&gt;</code>
 does not kill your working directory. So committing to a new branch is save.</p>
