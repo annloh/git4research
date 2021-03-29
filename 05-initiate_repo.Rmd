@@ -11,6 +11,17 @@ or you can create a new empty repository on github to start a project.
 
 Here the step by step instructions:
 
+- Open the repository you want to clone in your browser
+- Click the green button labeled "Code" 
+- Click the clipboard symbol to copy the repository path to your clipboard
+- Navigate to the folder that you want the cloned repository to be a subfolder of
+- Open git bash in this folder (with a right click)
+- Type `$ git clone` and then paste the path from your clipboard (careful Ctrl + v does not work)
+- Hit enter
+- Depending on your settings you might be asked for your github credentials 
+- You should now find a new folder on your computer containing the cloned repository
+
+
 ### !Caveat
 
 Do not clone a remote repository that you do not have writing access to. 
